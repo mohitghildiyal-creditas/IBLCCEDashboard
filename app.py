@@ -350,27 +350,6 @@ data = {
 df_summary = pd.DataFrame(data)
 df_summary["Activated %"] = round((df_summary["Activated"] / df_summary["Sourced"]) * 100, 2)
 
-# KPI strip
-total_sourced   = df_summary["Sourced"].sum()
-total_activated = df_summary["Activated"].sum()
-avg_act_pct     = round(total_activated / total_sourced * 100, 2)
-
-k1, k2, k3, k4 = st.columns(4)
-for col, label, val, sub in [
-    (k1, "Total Sourced",   f"{total_sourced:,.0f}",   "All months"),
-    (k2, "Total Activated", f"{total_activated:,.0f}", "All months"),
-    (k3, "Avg Activation %", f"{avg_act_pct}%",         "Sourced → Activated"),
-    (k4, "Months Tracked",  str(len(df_summary)),        "Jul–Dec 2025"),
-]:
-    col.markdown(f"""
-    <div class="kpi-card">
-        <div class="kpi-label">{label}</div>
-        <div class="kpi-value">{val}</div>
-        <div class="kpi-sub">{sub}</div>
-    </div>""", unsafe_allow_html=True)
-
-st.markdown("<div style='height:20px'></div>", unsafe_allow_html=True)
-
 col1, col2 = st.columns([1, 1.7])
 
 with col1:
@@ -447,7 +426,8 @@ if os.path.exists(csv_path):
         st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
         month_label_map   = dict(zip(df_external["MonthYearLabel"], df_external["MonthYear"]))
         month_num_to_label = {v: k for k, v in month_label_map.items()}
-        month_labels_sorted = sorted(df_external["MonthYearLabel"].dropna().unique().tolist())
+        _my_order = df_external[["MonthYearLabel","MonthYear"]].drop_duplicates().dropna().sort_values("MonthYear")
+        month_labels_sorted = _my_order["MonthYearLabel"].tolist()
         latest_month_label  = month_num_to_label.get(df_external["MonthYear"].max())
         month_filter_labels = st.pills("month_year", options=month_labels_sorted,
                                        default=[latest_month_label] if latest_month_label else None,
@@ -479,8 +459,6 @@ if os.path.exists(csv_path):
                              default="Count", selection_mode="single",
                              label_visibility="collapsed", key="view_mode_pills")
 
-    date_col = "AccountOpeningDate" if date_view == "Account Opening Date" else "ReceivedDate"
-
     if activation_view == "Creditas Activated":
         df_act = df_filtered[df_filtered["CreditasActivated"] == 1].copy()
     elif activation_view == "Bank Activated":
@@ -488,10 +466,45 @@ if os.path.exists(csv_path):
     else:
         df_act = df_filtered[df_filtered["OverallActivated"] == 1].copy()
 
-    df_cuid_base = df_filtered.groupby(date_col, as_index=False)["Total_CUID"].sum()
-    numeric_cols = df_act.select_dtypes(include="number").columns
-    df_grouped = df_act.groupby(date_col, as_index=False)[numeric_cols].sum().sort_values(date_col)
-    df_grouped = df_grouped.drop(columns=["Total_CUID"], errors="ignore").merge(df_cuid_base, on=date_col, how="left")
+    day_cols_all = [c for c in df_act.columns if c.startswith("Day")]
+
+    if date_view == "Received Date":
+        date_col = "ReceivedDate"
+        # Shift Day columns: Day_N from AccountOpeningDate → Day_{N-offset} from ReceivedDate
+        # offset = (ReceivedDate - AccountOpeningDate).days (can be positive/negative)
+        df_rd = df_act.copy()
+        df_rd["_aod"] = pd.to_datetime(df_rd["AccountOpeningDate"])
+        df_rd["_rcd"] = pd.to_datetime(df_rd["ReceivedDate"])
+        df_rd["_offset"] = (df_rd["_rcd"] - df_rd["_aod"]).dt.days.fillna(0).astype(int)
+        # Extract numeric day indices
+        import re as _re
+        day_idx_map = {c: int(_re.search(r'\d+', c).group()) for c in day_cols_all if _re.search(r'\d+', c)}
+        # Melt to long, shift, re-pivot
+        df_melt = df_rd.melt(
+            id_vars=["ReceivedDate", "_offset"],
+            value_vars=list(day_idx_map.keys()),
+            var_name="_day_col", value_name="_cnt"
+        )
+        df_melt["_new_day"] = df_melt["_day_col"].map(day_idx_map) - df_melt["_offset"]
+        df_melt = df_melt[df_melt["_new_day"] >= 0]
+        if len(df_melt) > 0:
+            df_pivot = df_melt.groupby(["ReceivedDate", "_new_day"])["_cnt"].sum().unstack("_new_day").fillna(0)
+            df_pivot.columns = [f"Day{int(c)}" for c in df_pivot.columns]
+            df_pivot = df_pivot.reset_index()
+        else:
+            df_pivot = pd.DataFrame(columns=["ReceivedDate"])
+        # Add Total_CUID
+        df_cuid_base = df_filtered.groupby("ReceivedDate", as_index=False)["Total_CUID"].sum()
+        df_grouped = df_pivot.merge(df_cuid_base, on="ReceivedDate", how="left").sort_values("ReceivedDate")
+        # Add Total_Activation
+        act_grp = df_act.groupby("ReceivedDate", as_index=False)["Total_Activation"].sum()
+        df_grouped = df_grouped.merge(act_grp, on="ReceivedDate", how="left")
+    else:
+        date_col = "AccountOpeningDate"
+        df_cuid_base = df_filtered.groupby(date_col, as_index=False)["Total_CUID"].sum()
+        numeric_cols = df_act.select_dtypes(include="number").columns
+        df_grouped = df_act.groupby(date_col, as_index=False)[numeric_cols].sum().sort_values(date_col)
+        df_grouped = df_grouped.drop(columns=["Total_CUID"], errors="ignore").merge(df_cuid_base, on=date_col, how="left")
 
     cols_remove = ["CreditasActivated","BankActivated","OverallActivated","MonthYear","MonthYearLabel",
                    "ProductCode","ProductDesc","ReceivedDate","ActivationDate","BankActivatedDate",
@@ -547,7 +560,8 @@ if os.path.exists(camp_path):
 
     cm_map     = dict(zip(df_camp["_MonthLabel"], df_camp["_MonthNum"]))
     cm_rev     = {v: k for k, v in cm_map.items()}
-    cm_sorted  = sorted(df_camp["_MonthLabel"].dropna().unique().tolist())
+    _cm_order  = df_camp[["_MonthLabel","_MonthNum"]].drop_duplicates().dropna().sort_values("_MonthNum")
+    cm_sorted  = _cm_order["_MonthLabel"].tolist()
     cm_latest  = cm_rev.get(df_camp["_MonthNum"].max())
 
     st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
@@ -595,7 +609,8 @@ if os.path.exists(prod_csv):
 
     pm_map    = dict(zip(df_prod["_MonthLabel"], df_prod["MonthYear"]))
     pm_rev    = {v: k for k, v in pm_map.items()}
-    pm_labels = sorted(df_prod["_MonthLabel"].dropna().unique().tolist())
+    _pm_order = df_prod[["_MonthLabel","MonthYear"]].drop_duplicates().dropna().sort_values("MonthYear")
+    pm_labels = _pm_order["_MonthLabel"].tolist()
     pm_latest = pm_rev.get(df_prod["MonthYear"].max())
 
     st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
