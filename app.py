@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import os
 import datetime
+import base64
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -197,7 +198,30 @@ if "authenticated" not in st.session_state:
 if "username" not in st.session_state:
     st.session_state.username = ""
 
+def _img_b64(path):
+    try:
+        with open(path, "rb") as f:
+            return base64.b64encode(f.read()).decode()
+    except Exception:
+        return None
+
 def login_page():
+    # Load logos
+    indus_b64   = _img_b64("assets/indus.png")
+    creditas_b64 = _img_b64("assets/creditas.png")
+
+    indus_html = (
+        f'<img src="data:image/png;base64,{indus_b64}" style="height:44px;object-fit:contain;" />'
+        if indus_b64 else
+        f'<span style="background:{C_NAVY};color:white;font-size:12px;font-weight:700;'
+        f'padding:8px 12px;border-radius:2px;">IBL BANK</span>'
+    )
+    creditas_html = (
+        f'<img src="data:image/png;base64,{creditas_b64}" style="height:44px;object-fit:contain;" />'
+        if creditas_b64 else
+        f'<span style="color:{C_NAVY};font-size:12px;font-weight:700;">CREDITAS</span>'
+    )
+
     st.markdown("""
     <div style="display:flex;justify-content:center;margin-top:80px;">
     """, unsafe_allow_html=True)
@@ -207,9 +231,14 @@ def login_page():
         st.markdown(f"""
         <div style="background:{C_SURFACE};border:1px solid {C_BORDER};border-radius:4px;
                     padding:48px 44px;box-shadow:0 4px 24px rgba(5,28,44,0.10);">
-            <div style="background:{C_NAVY};color:white;font-size:12px;font-weight:700;
-                        letter-spacing:1px;padding:7px 12px;display:inline-block;
-                        border-radius:2px;margin-bottom:24px;">IBL BANK</div>
+            <!-- LOGOS ROW -->
+            <div style="display:flex;align-items:center;justify-content:center;
+                        gap:28px;margin-bottom:32px;padding-bottom:24px;
+                        border-bottom:1px solid {C_BORDER};">
+                {indus_html}
+                <div style="width:1px;height:36px;background:{C_BORDER};"></div>
+                {creditas_html}
+            </div>
             <div style="font-size:22px;font-weight:800;color:{C_NAVY};margin-bottom:4px;">
                 Sign in to Dashboard</div>
             <div style="font-size:13px;color:{C_MUTED};margin-bottom:28px;">
