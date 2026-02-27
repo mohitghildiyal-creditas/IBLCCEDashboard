@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.graph_objects as go
 import os
 import datetime
-import base64
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -139,41 +138,61 @@ html, body, [class*="css"] {{
 }}
 
 /* ---- LOGIN PAGE ---- */
-.login-wrap {{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 85vh;
+.login-page-bg {{
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, {C_NAVY} 0%, #0a2d4a 50%, #0d3a5c 100%);
+    z-index: -1;
 }}
 .login-card {{
     background: {C_SURFACE};
-    border: 1px solid {C_BORDER};
-    border-radius: 4px;
-    padding: 48px 44px;
-    width: 420px;
-    box-shadow: 0 4px 24px rgba(5,28,44,0.10);
+    border-radius: 6px;
+    padding: 52px 48px 44px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35), 0 4px 16px rgba(0,0,0,0.15);
 }}
-.login-logo {{
-    background: {C_NAVY};
-    color: white;
-    font-size: 13px;
+.login-brand {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+}}
+.login-brand-dot {{
+    width: 10px;
+    height: 10px;
+    background: {C_SKY};
+    border-radius: 50%;
+}}
+.login-brand-name {{
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1px;
-    padding: 8px 14px;
-    display: inline-block;
-    border-radius: 2px;
-    margin-bottom: 28px;
+    letter-spacing: 2px;
+    color: {C_MUTED};
+    text-transform: uppercase;
 }}
 .login-title {{
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     color: {C_NAVY};
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }}
 .login-sub {{
     font-size: 13px;
     color: {C_MUTED};
-    margin-bottom: 28px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}}
+.login-divider {{
+    height: 1px;
+    background: {C_BORDER};
+    margin: 28px 0;
+}}
+.login-footer {{
+    font-size: 11px;
+    color: {C_MUTED};
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
 }}
 
 div[data-testid="stDataFrame"] {{
@@ -198,58 +217,34 @@ if "authenticated" not in st.session_state:
 if "username" not in st.session_state:
     st.session_state.username = ""
 
-def _img_b64(path):
-    try:
-        with open(path, "rb") as f:
-            return base64.b64encode(f.read()).decode()
-    except Exception:
-        return None
-
 def login_page():
-    # Load logos
-    indus_b64   = _img_b64("assets/indus.png")
-    creditas_b64 = _img_b64("assets/creditas.png")
-
-    indus_html = (
-        f'<img src="data:image/png;base64,{indus_b64}" style="height:44px;object-fit:contain;" />'
-        if indus_b64 else
-        f'<span style="background:{C_NAVY};color:white;font-size:12px;font-weight:700;'
-        f'padding:8px 12px;border-radius:2px;">IBL BANK</span>'
-    )
-    creditas_html = (
-        f'<img src="data:image/png;base64,{creditas_b64}" style="height:44px;object-fit:contain;" />'
-        if creditas_b64 else
-        f'<span style="color:{C_NAVY};font-size:12px;font-weight:700;">CREDITAS</span>'
-    )
-
-    st.markdown("""
-    <div style="display:flex;justify-content:center;margin-top:80px;">
+    # Full-page dark background
+    st.markdown(f"""
+    <style>
+    .stApp {{ background: linear-gradient(135deg, {C_NAVY} 0%, #0a2d4a 50%, #0d3a5c 100%) !important; }}
+    .block-container {{ padding-top: 0 !important; }}
+    </style>
     """, unsafe_allow_html=True)
 
-    col = st.columns([1, 1.2, 1])[1]
+    st.markdown("<div style='height:80px'></div>", unsafe_allow_html=True)
+
+    col = st.columns([1, 1.1, 1])[1]
     with col:
         st.markdown(f"""
-        <div style="background:{C_SURFACE};border:1px solid {C_BORDER};border-radius:4px;
-                    padding:48px 44px;box-shadow:0 4px 24px rgba(5,28,44,0.10);">
-            <!-- LOGOS ROW -->
-            <div style="display:flex;align-items:center;justify-content:center;
-                        gap:28px;margin-bottom:32px;padding-bottom:24px;
-                        border-bottom:1px solid {C_BORDER};">
-                {indus_html}
-                <div style="width:1px;height:36px;background:{C_BORDER};"></div>
-                {creditas_html}
+        <div class="login-card">
+            <div class="login-brand">
+                <div class="login-brand-dot"></div>
+                <div class="login-brand-name">IndusInd Bank &nbsp;·&nbsp; Creditas</div>
             </div>
-            <div style="font-size:22px;font-weight:800;color:{C_NAVY};margin-bottom:4px;">
-                Sign in to Dashboard</div>
-            <div style="font-size:13px;color:{C_MUTED};margin-bottom:28px;">
-                Credit Card Activation Analytics</div>
+            <div class="login-title">Welcome back</div>
+            <div class="login-sub">Sign in to access the Credit Card<br>Activation Analytics Dashboard</div>
         </div>
         """, unsafe_allow_html=True)
 
         with st.form("login_form"):
-            username = st.text_input("Username", placeholder="Enter username")
-            password = st.text_input("Password", type="password", placeholder="Enter password")
-            submitted = st.form_submit_button("Sign In", use_container_width=True, type="primary")
+            username = st.text_input("Username", placeholder="Enter your username")
+            password = st.text_input("Password", type="password", placeholder="Enter your password")
+            submitted = st.form_submit_button("Sign In →", use_container_width=True, type="primary")
 
             if submitted:
                 if username in USERS and USERS[username] == password:
@@ -259,7 +254,11 @@ def login_page():
                 else:
                     st.error("Invalid username or password.")
 
-    st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="login-footer">
+            © {datetime.date.today().year} IndusInd Bank · Confidential
+        </div>
+        """, unsafe_allow_html=True)
 
 
 if not st.session_state.authenticated:
