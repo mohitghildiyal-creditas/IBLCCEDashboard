@@ -1,0 +1,1206 @@
+,Channel,CampaignId,TemplateId,TemplateCategory,CampaignTitle,Category,TemplateContent,LongUrl,ScheduleDate,ScheduleTime,Sent,Last_5_Fail,Last_3_Fail,IsDelivered,Click,BotClicks,NotBotClicks,Landed,Login_Last_4_CC,Login_OTP,O_Block,ConsentCTA,ConsentOTP,Set_Pin,Pin_Change,GeneralBlocked,Card_Activated_SameDay,Card_Activated_DiffDay,AlreadyActivated,Managed
+0,SMS,241364,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-26,16:02:45,2211,0,230,1354,754,1,753,45,29,29,0,0,0,24,0,0.0,25,1,7,5
+1,WHATSAPP,243455,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-26,16:02:30,490,0,0,193,40,0,40,40,20,20,0,0,0,15,0,,16,2,6,5
+2,EMAIL,250912,2003,Promotional,PrvMnth_A_Crd_EML_nw_3feb_2,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-26,15:00:00,2378,0,0,2132,8,0,8,8,3,3,0,0,0,3,0,0.0,2,0,2,2
+3,EMAIL,250908,2002,Promotional, CurMnth_A_Crd_EML_nw_THUR,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-26,15:00:00,6333,0,0,5956,71,0,71,65,33,32,0,0,0,22,1,1.0,23,2,7,6
+4,EMAIL,243469,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-26,17:30:00,1283,0,0,1227,50,0,50,46,14,13,0,0,0,7,0,0.0,0,7,0,0
+5,SMS,241431,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-26,17:02:00,53,0,3,48,26,0,26,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+6,SMS,243468,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-25,15:02:30,1792,0,17,1674,1040,1,1039,412,280,275,0,0,0,222,5,2.0,197,53,44,31
+7,SMS,241389,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-25,11:02:00,590,0,17,531,301,0,301,10,3,2,2,2,2,2,0,0.0,2,0,0,0
+8,SMS,250225,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-25,12:02:30,2624,0,115,2301,1228,1,1227,72,44,42,0,0,0,26,0,7.0,28,3,17,12
+9,EMAIL,243466,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-25,17:30:00,1623,0,0,1542,61,0,61,61,26,26,0,0,0,18,0,0.0,7,12,3,2
+10,SMS,236555,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-25,12:02:00,5825,0,730,3434,1744,0,1744,165,98,98,0,0,0,77,1,4.0,64,21,16,12
+11,WHATSAPP,243452,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-25,16:02:30,681,0,0,311,43,0,43,43,21,20,0,0,0,10,1,,14,2,9,6
+12,SMS,243465,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-24,15:02:30,1262,0,10,1200,769,0,769,309,223,217,0,0,0,174,3,1.0,167,36,37,27
+13,WHATSAPP,243449,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-24,16:02:30,492,0,0,189,42,0,42,41,23,18,0,0,0,5,0,,11,1,7,5
+14,EMAIL,243463,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-24,17:30:00,1133,0,0,1076,62,0,62,59,31,30,0,0,0,16,1,3.0,7,10,1,0
+15,WHATSAPP,253120,1820,Utility,PrevMnth_A_Crd_WA_nw,,"Dear Cardholder,
+
+Kindly activate your new {#var1#} Credit card _ending with xx{#var2#}_ by setting your secured PIN instantly.
+
+Click the button below to activate ⬇️",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-24,16:02:45,2176,0,0,879,40,0,40,40,19,17,0,0,0,10,0,,7,7,9,7
+16,SMS,241363,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-24,16:02:45,2547,0,283,1518,781,0,781,84,53,53,0,0,0,42,1,0.0,36,9,13,8
+17,WHATSAPP,236533,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-24,14:02:00,2551,0,0,1188,124,0,124,123,69,67,0,0,0,42,0,,46,15,34,25
+18,WHATSAPP,243446,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-23,16:02:30,445,0,0,206,44,0,44,42,22,22,0,0,0,14,0,,19,2,12,9
+19,EMAIL,243460,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-23,17:30:00,947,0,0,861,41,0,41,39,22,20,0,0,0,14,1,0.0,5,11,6,3
+20,SMS,241386,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-23,11:02:00,445,0,14,397,203,1,202,13,9,9,9,8,9,9,0,0.0,7,2,0,0
+21,SMS,241430,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-23,17:02:00,55,0,3,49,31,0,31,2,1,1,0,0,0,0,1,0.0,0,0,0,0
+22,SMS,243462,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-23,15:02:30,1055,0,19,993,640,0,640,255,173,172,0,0,0,134,4,1.0,128,33,48,32
+23,SMS,236553,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-23,12:02:00,5210,0,678,3079,1673,0,1673,142,85,84,0,0,0,56,6,3.0,43,18,14,13
+24,SMS,236551,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-22,12:02:00,6175,0,776,3639,1978,0,1978,199,99,95,0,0,0,61,1,1.0,51,17,16,10
+25,SMS,251506,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB_2,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-22,15:02:00,3034,0,123,2771,1468,2,1467,89,55,52,0,0,0,34,0,0.0,32,14,32,28
+26,SMS,241385,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-22,12:02:00,536,0,14,483,254,1,253,19,14,14,14,13,14,12,0,0.0,12,2,0,0
+27,WHATSAPP,243440,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,16:02:30,625,0,0,304,42,0,42,41,22,21,0,0,0,9,0,,13,3,13,11
+28,EMAIL,243454,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,17:30:00,1103,0,0,1036,40,0,40,39,14,13,0,0,0,9,0,0.0,4,7,3,3
+29,WHATSAPP,236531,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,14:02:00,2788,0,0,1476,176,0,176,172,101,100,0,0,0,41,1,,53,23,43,27
+30,WHATSAPP,241397,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-02-21,11:02:00,193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+31,SMS,241404,5721,Explicit,DoneEcom_notdonePin_Jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,10:02:00,22506,0,5274,12591,4817,0,4817,141,75,75,0,0,0,4,4,0.0,16,1,17,4
+32,SMS,241362,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-21,16:02:45,2507,0,273,1548,754,0,754,67,39,38,1,1,1,26,0,0.0,24,3,6,5
+33,SMS,243456,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,15:02:30,1228,0,20,1175,736,0,736,282,215,213,0,0,0,126,4,1.0,144,40,81,66
+34,SMS,241411,5502,Explicit,DonePin_NotdoneEcom_Jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,10:02:15,24571,0,4689,14751,5516,3,5513,147,64,61,0,0,0,2,5,0.0,9,0,9,6
+35,SMS,241429,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-21,17:02:00,62,0,4,57,34,0,34,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+36,EMAIL,243451,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-20,17:30:00,1018,0,0,963,31,0,31,29,8,7,0,0,0,6,1,0.0,2,4,1,1
+37,SMS,236549,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-20,12:02:00,6199,0,654,3835,1652,0,1652,259,144,142,0,0,0,99,1,3.0,82,26,14,8
+38,WHATSAPP,243436,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-20,16:02:30,532,0,0,259,57,0,57,56,39,37,0,0,0,14,0,,24,6,27,19
+39,SMS,243453,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-20,15:02:30,1110,0,17,1066,633,3,630,223,167,163,0,0,0,110,4,0.0,111,30,53,35
+40,SMS,241390,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-20,10:02:00,362,0,3,333,171,1,170,8,5,5,4,4,4,4,0,0.0,3,1,0,0
+41,WHATSAPP,243433,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-19,16:02:30,512,0,0,247,48,0,48,48,23,23,0,0,0,11,1,,11,4,5,3
+42,EMAIL,243448,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-19,17:30:00,1364,0,0,1300,115,0,115,113,61,60,0,0,0,48,0,1.0,4,45,6,3
+43,EMAIL,250907,2002,Promotional, CurMnth_A_Crd_EML_nw_THUR,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-19,15:00:00,5670,0,0,5337,151,0,151,143,87,84,0,0,0,53,0,1.0,33,33,18,11
+44,EMAIL,250911,2003,Promotional,PrvMnth_A_Crd_EML_nw_3feb_2,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-19,15:00:00,3449,0,0,3079,25,0,25,23,13,12,0,0,0,7,1,0.0,0,9,6,5
+45,SMS,241428,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-19,17:02:00,108,0,13,93,52,0,52,2,1,1,0,0,0,0,1,0.0,0,0,0,0
+46,SMS,241361,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-19,16:02:45,2310,0,270,1369,621,0,621,66,41,39,2,2,2,25,1,0.0,22,9,9,2
+47,WHATSAPP,243430,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-18,16:02:30,491,0,0,255,54,0,54,54,33,31,0,0,0,19,0,,16,4,5,5
+48,EMAIL,243445,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-18,17:30:00,1447,0,0,1384,112,0,112,110,54,53,0,0,0,41,3,0.0,6,35,3,2
+49,SMS,250224,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-18,12:02:30,3591,0,137,3291,1692,4,1688,133,94,90,1,1,1,63,2,1.0,60,18,41,29
+50,SMS,236547,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-18,12:02:00,5409,0,611,3325,1555,0,1555,224,134,131,0,0,0,103,3,0.0,83,26,26,16
+51,SMS,241387,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-18,11:02:00,447,0,2,421,231,0,231,23,11,11,7,6,5,4,0,2.0,5,0,0,0
+52,SMS,241360,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-17,16:02:45,2662,0,292,1648,908,1,907,113,64,62,0,0,0,48,1,0.0,45,6,8,4
+53,WHATSAPP,243427,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-17,16:02:30,678,0,0,336,60,0,60,60,28,28,0,0,0,21,1,,15,11,12,11
+54,SMS,243444,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-17,15:02:30,1679,0,21,1626,1017,0,1017,407,293,284,0,0,0,235,7,0.0,217,40,28,13
+55,EMAIL,243442,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-17,17:30:00,1507,0,0,1428,64,0,64,61,27,26,0,0,0,21,0,0.0,10,13,6,6
+56,WHATSAPP,236529,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-17,14:02:00,2054,0,0,1040,146,0,146,141,76,72,0,0,0,39,3,,38,19,31,24
+57,SMS,241382,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-16,11:02:00,235,0,1,221,125,0,125,10,5,5,5,5,5,5,0,0.0,3,2,0,0
+58,EMAIL,243439,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-16,17:30:00,2253,0,0,2118,158,0,158,151,88,85,0,0,0,71,3,0.0,16,56,14,9
+59,SMS,241427,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-16,17:02:00,113,0,13,90,49,0,49,3,2,2,0,0,0,0,0,0.0,0,0,0,0
+60,SMS,236545,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-16,12:02:00,4364,0,500,2783,1416,0,1416,142,80,76,0,0,0,52,1,2.0,42,13,11,8
+61,SMS,251505,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB_2,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-15,15:02:00,4244,0,146,3934,2086,4,2084,188,108,104,8,7,7,72,1,2.0,59,21,31,22
+62,SMS,241381,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-15,12:02:00,775,0,19,723,435,1,434,31,20,20,16,12,16,15,0,0.0,10,6,0,0
+63,SMS,236544,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-15,12:02:00,4620,0,506,2852,1626,0,1626,188,90,88,0,0,0,58,1,3.0,47,19,13,8
+64,SMS,241359,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-14,16:02:45,2502,0,241,1557,885,0,885,85,47,47,0,0,0,33,0,0.0,30,9,8,5
+65,SMS,241403,5721,Explicit,DoneEcom_notdonePin_Jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-14,10:02:00,22338,0,5314,13098,6670,0,6670,156,83,80,0,0,0,2,0,0.0,21,2,23,3
+66,SMS,241410,5502,Explicit,DonePin_NotdoneEcom_Jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-14,10:02:15,25394,0,4981,15936,6220,0,6220,116,47,46,0,0,0,1,3,0.0,5,1,5,2
+67,WHATSAPP,241396,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-02-14,11:02:00,490,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+68,SMS,241426,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-14,17:02:00,118,0,13,103,55,1,54,3,2,2,0,0,0,2,0,0.0,1,1,0,0
+69,WHATSAPP,236527,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-14,14:02:00,2218,0,0,1068,144,0,144,140,68,67,0,0,0,45,1,,44,16,30,20
+70,SMS,236542,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-13,12:02:00,4742,0,485,3097,1403,0,1403,191,93,87,0,0,0,60,2,2.0,39,30,16,11
+71,EMAIL,243431,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-13,17:30:00,1182,0,0,1127,71,0,71,69,35,34,0,0,0,22,4,0.0,9,14,3,1
+72,SMS,241388,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-13,10:02:00,832,0,20,767,439,0,439,25,15,14,11,11,10,10,0,2.0,7,3,0,0
+73,SMS,243432,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-13,15:02:30,1301,0,15,1252,809,1,808,307,223,221,0,0,0,169,5,3.0,139,48,33,27
+74,WHATSAPP,243415,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-13,16:02:30,473,0,0,229,38,0,38,38,19,19,0,0,0,5,0,,12,1,11,7
+75,EMAIL,250910,2003,Promotional,PrvMnth_A_Crd_EML_nw_3feb_2,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,15:00:00,4589,0,0,4159,50,0,50,49,28,28,0,0,0,21,0,0.0,10,14,7,7
+76,EMAIL,250906,2002,Promotional, CurMnth_A_Crd_EML_nw_THUR,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,15:00:00,3807,0,0,3597,94,0,94,93,53,52,0,0,0,41,1,0.0,25,20,8,6
+77,SMS,243429,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,15:02:30,1510,0,25,1449,912,1,911,361,254,245,0,0,0,202,8,0.0,172,45,21,16
+78,SMS,241425,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,17:02:00,122,0,13,107,60,1,59,3,2,2,0,0,0,2,0,0.0,2,0,2,1
+79,SMS,241358,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-12,16:02:45,2195,0,234,1353,604,2,602,45,26,25,0,0,0,16,0,0.0,14,5,4,3
+80,EMAIL,243428,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,17:30:00,1374,0,0,1295,87,0,87,76,44,44,0,0,0,26,1,1.0,5,22,2,2
+81,WHATSAPP,243412,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-12,16:02:30,634,0,0,315,59,0,59,59,27,27,0,0,0,11,1,,9,7,10,8
+82,EMAIL,243425,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-11,17:30:00,1296,0,0,1241,58,0,58,55,25,25,0,0,0,16,3,0.0,3,13,0,0
+83,WHATSAPP,243409,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-11,16:02:30,443,0,0,180,38,0,38,38,26,25,0,0,0,15,0,,16,3,4,2
+84,SMS,241383,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-11,11:02:00,956,0,22,891,522,0,522,70,39,38,30,28,29,29,0,2.0,22,7,0,0
+85,SMS,243426,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-11,15:02:30,1424,0,14,1390,934,1,933,353,259,255,0,0,0,225,11,0.0,168,61,13,11
+86,SMS,250223,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-11,12:02:30,5145,0,167,4828,2620,2,2618,271,177,169,2,2,2,127,2,5.0,106,40,71,55
+87,SMS,236540,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-11,12:02:00,3667,0,337,2363,1216,0,1216,189,98,96,0,0,0,67,1,1.0,47,24,11,4
+88,WHATSAPP,236525,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-10,14:02:00,1105,0,0,416,102,0,102,101,55,54,0,0,0,34,2,,31,12,17,15
+89,SMS,241357,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-10,16:02:45,2531,0,254,1575,687,2,685,81,54,53,0,0,0,37,0,0.0,39,4,8,4
+90,SMS,243423,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-10,15:02:30,1595,0,13,1546,1000,2,998,387,286,280,0,0,0,226,5,0.0,175,68,26,14
+91,EMAIL,243422,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-10,17:30:00,1461,0,0,1397,77,0,77,76,38,35,0,0,0,26,1,0.0,11,16,2,1
+92,WHATSAPP,243403,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-09,16:02:30,468,0,0,219,46,0,46,46,27,25,0,0,0,13,1,,12,4,6,3
+93,SMS,241424,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-09,17:02:00,124,0,14,106,57,1,56,4,2,2,0,0,0,1,0,0.0,1,0,1,0
+94,SMS,241378,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-09,11:02:00,266,0,2,250,135,1,134,12,8,6,5,5,5,5,0,0.0,3,2,0,0
+95,SMS,236538,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-09,12:02:00,2998,0,266,1952,1008,1,1007,125,71,71,0,0,0,54,0,1.0,40,16,6,5
+96,SMS,243420,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-09,15:02:30,1140,0,17,1103,724,1,723,261,184,175,0,0,0,132,4,0.0,121,31,33,20
+97,EMAIL,243419,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-09,17:30:00,1053,0,0,995,58,0,58,57,29,29,0,0,0,20,1,1.0,6,15,1,1
+98,SMS,251504,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB_2,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-08,15:02:00,6990,0,195,6526,3544,0,3544,484,323,315,6,4,6,246,4,8.0,187,93,106,77
+99,SMS,241377,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-08,12:02:00,350,0,3,327,183,1,182,14,12,11,10,9,10,10,1,1.0,7,3,0,0
+100,SMS,236536,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-08,12:02:00,3270,0,276,2142,1240,0,1240,182,79,76,0,0,0,55,2,1.0,48,9,6,5
+101,EMAIL,243413,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,17:30:00,1587,0,0,1504,74,0,74,74,39,38,0,0,0,30,3,1.0,6,24,5,3
+102,SMS,243414,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,15:02:30,1727,0,25,1672,1092,1,1091,368,263,255,0,0,0,201,6,2.0,175,51,40,27
+103,SMS,241423,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,17:02:00,102,0,13,86,48,2,46,2,1,1,0,0,0,0,0,0.0,0,0,0,0
+104,SMS,241409,5502,Explicit,DonePin_NotdoneEcom_Jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,10:02:15,25747,0,5268,15768,7184,1,7183,162,76,75,1,0,0,2,11,2.0,8,2,10,7
+105,SMS,241356,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-07,16:02:45,2751,0,262,1660,941,1,940,90,49,48,0,0,0,30,2,0.0,30,10,13,6
+106,WHATSAPP,236523,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,14:02:00,828,0,0,429,75,0,75,75,42,42,0,0,0,25,1,,27,9,25,19
+107,WHATSAPP,241395,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-02-07,11:02:00,572,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+108,WHATSAPP,243396,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,16:02:30,698,0,0,369,77,0,77,76,35,31,0,0,0,13,0,,13,3,7,6
+109,SMS,241402,5721,Explicit,DoneEcom_notdonePin_Jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-07,10:02:00,21744,0,5300,11782,4750,0,4750,115,68,67,0,0,0,4,2,2.0,10,1,11,0
+110,WHATSAPP,243394,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-06,16:02:30,600,0,0,333,49,0,49,49,29,27,0,0,0,12,0,,14,5,16,9
+111,SMS,241384,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-06,10:02:00,1020,0,58,899,483,0,483,15,10,10,6,5,6,6,0,1.0,4,2,0,0
+112,EMAIL,243410,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-06,17:30:00,1385,0,0,1298,61,0,61,60,35,34,0,0,0,25,0,0.0,8,20,10,6
+113,SMS,243411,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-06,15:02:30,1495,0,19,1432,925,4,921,307,218,211,0,0,0,178,5,1.0,148,44,27,21
+114,SMS,236534,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-06,12:02:00,2396,0,175,1594,985,0,985,174,94,93,0,0,0,71,2,0.0,58,19,6,3
+115,SMS,243408,6592,Implicit,main_Current_febtomay_HYPSB_CURRDAY_SMS_HYPCB_eaaa,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,15:02:30,1157,0,10,1129,761,2,760,313,212,208,0,0,0,183,6,0.0,165,26,15,11
+116,EMAIL,243407,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,17:30:00,1017,0,0,990,48,0,48,48,20,20,0,0,0,13,1,0.0,1,13,3,2
+117,EMAIL,250909,2003,Promotional,PrvMnth_A_Crd_EML_nw_3feb_2,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,15:00:00,8250,0,0,7615,151,0,151,149,88,85,1,1,1,64,2,5.0,32,38,19,14
+118,EMAIL,250905,2002,Promotional, CurMnth_A_Crd_EML_nw_THUR,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,15:00:00,1886,0,0,1795,92,0,92,90,55,54,0,0,0,35,0,0.0,24,12,3,3
+119,WHATSAPP,243393,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,16:02:30,309,0,0,152,30,0,30,30,7,7,0,0,0,1,0,,3,1,4,1
+120,SMS,241355,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-05,16:02:45,2902,0,289,1772,1034,0,1034,139,79,78,0,0,0,58,2,0.0,53,18,17,7
+121,SMS,241422,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-05,17:02:00,105,0,13,88,43,1,42,1,1,1,0,0,0,1,0,0.0,1,0,0,0
+122,WHATSAPP,243392,1383,Utility,main_Current_febtomay_HYPSB_CURRDAY_WA_HYPCB_0465,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-04,16:02:30,3303,0,0,1759,337,0,337,334,186,182,0,0,0,86,3,,102,45,86,50
+123,EMAIL,243404,2003,Promotional,main_Current_febtomay_HYPSB_CURRDAY_EML_HYPCB_bc78,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-04,17:30:00,7428,0,0,7017,270,0,270,268,136,135,0,0,0,84,2,2.0,37,54,18,7
+124,SMS,250222,6593,Implicit,PrevMnth_A_Crd_SM_nw_4FEB,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-04,12:02:30,7544,0,210,7092,3784,6,3778,515,335,329,18,15,17,222,5,17.0,192,67,95,57
+125,EMAIL,250134,2003,Promotional,PrvMnth_A_Crd_EML_nw_3feb,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2026-02-03,18:00:00,7660,0,0,7037,127,0,127,122,68,66,5,4,4,49,1,3.0,26,27,15,9
+126,SMS,241354,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-02-03,16:02:45,2868,0,298,1758,896,0,896,73,42,39,1,1,1,18,0,2.0,20,8,13,6
+127,SMS,241421,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-02,17:02:00,82,0,12,66,34,0,34,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+128,SMS,241374,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-02-02,11:02:00,50,0,0,43,26,0,26,1,1,1,0,0,0,0,0,1.0,0,0,0,0
+129,SMS,241373,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-02-01,12:02:00,154,0,1,145,73,0,73,2,1,1,1,1,1,1,0,0.0,1,0,0,0
+130,SMS,241420,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-31,17:02:00,84,0,12,71,36,0,36,2,2,2,0,0,0,0,1,0.0,1,0,1,0
+131,WHATSAPP,241394,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-01-31,11:02:00,2147,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+132,SMS,241353,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-31,16:02:45,3306,0,347,2026,1045,0,1045,102,64,64,1,1,1,44,3,1.0,48,0,9,5
+133,WHATSAPP,236519,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-31,14:02:00,4676,0,0,2393,137,0,137,135,71,69,0,0,0,30,0,,56,0,36,22
+134,SMS,236492,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-30,12:02:00,20043,0,1388,17788,8882,1,8881,304,189,185,3,3,3,95,2,8.0,119,31,145,114
+135,SMS,241380,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-30,10:02:00,8563,0,779,7406,4224,3,4221,87,47,46,34,29,33,31,0,0.0,26,7,0,0
+136,SMS,236526,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-30,12:02:00,8983,0,1367,4592,2448,0,2448,186,94,92,0,0,0,61,1,2.0,51,20,16,6
+137,SMS,241419,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-29,17:02:00,85,0,12,69,33,0,33,2,1,1,0,0,0,0,0,0.0,0,0,0,0
+138,SMS,241352,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-29,16:02:45,3412,0,381,2124,1274,0,1274,84,54,53,0,0,0,41,0,0.0,37,10,9,2
+139,EMAIL,236471,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-29,11:00:00,20030,0,0,17511,62,0,62,55,42,38,2,2,2,17,2,1.0,16,13,26,19
+140,WHATSAPP,241078,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-28,16:02:30,820,0,0,402,69,0,69,69,33,33,0,0,0,21,1,,20,5,5,4
+141,SMS,236524,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-28,12:02:00,8804,0,1242,4477,2230,0,2230,144,82,81,0,0,0,54,3,2.0,44,16,12,6
+142,SMS,241375,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-01-28,11:02:00,8955,0,789,7742,4782,2,4780,291,184,177,124,113,122,122,4,2.0,106,22,5,4
+143,SMS,241085,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-28,15:02:30,1940,0,27,1867,1234,2,1233,447,300,295,0,0,0,243,7,0.0,212,48,25,14
+144,SMS,236491,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-28,12:02:00,19655,0,1369,16884,8711,2,8709,374,249,238,2,2,2,149,0,1.0,173,40,205,160
+145,EMAIL,241086,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-28,17:30:00,1773,0,0,1683,87,0,87,83,38,35,0,0,0,23,1,0.0,5,18,2,0
+146,WHATSAPP,236516,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-27,14:02:00,3836,0,0,1836,146,0,146,144,81,79,0,0,0,50,3,,53,12,27,24
+147,EMAIL,241083,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-27,17:30:00,2398,0,0,2201,118,0,118,116,62,61,0,0,0,46,2,0.0,15,32,6,4
+148,EMAIL,236470,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-27,11:00:00,28350,0,0,22184,115,0,115,103,69,68,9,7,9,30,1,13.0,31,14,35,31
+149,WHATSAPP,241075,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-27,16:02:30,852,0,0,374,62,0,62,58,34,33,0,0,0,23,0,,23,7,9,4
+150,SMS,241082,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-27,15:02:30,2624,0,24,2523,1641,2,1640,549,390,380,0,0,0,314,9,0.0,265,75,49,27
+151,SMS,241351,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-27,16:02:45,3677,0,375,2333,1430,1,1429,153,87,84,0,0,0,53,3,0.0,47,15,13,10
+152,SMS,236522,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-26,12:02:00,9299,0,1385,5434,3007,1,3007,189,103,100,0,0,0,58,1,3.0,35,31,17,8
+153,SMS,236490,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-26,12:02:00,28838,0,1959,25393,12792,7,12785,635,435,421,78,66,77,228,3,73.0,203,99,221,166
+154,SMS,241418,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-26,17:02:00,78,0,11,64,30,0,30,1,1,1,0,0,0,0,0,0.0,0,0,0,0
+155,SMS,241371,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-01-26,11:02:00,316,0,1,295,159,1,158,8,6,4,3,2,3,3,0,1.0,2,1,0,0
+156,SMS,236489,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-25,12:02:00,29134,0,1971,23304,11449,8,11442,486,313,303,49,40,45,151,2,62.0,163,30,144,111
+157,SMS,236520,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-25,12:02:00,9621,0,1397,5291,2957,1,2956,200,108,103,0,0,0,78,0,3.0,59,23,17,8
+158,SMS,241370,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-25,12:02:00,403,0,1,379,209,1,208,12,6,6,5,5,5,5,0,0.0,4,1,0,0
+159,WHATSAPP,236515,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-24,14:02:00,5267,0,0,2739,314,0,314,310,171,166,0,0,0,104,6,,105,29,61,44
+160,SMS,241400,5721,Explicit,DoneEcom_notdonePin_Jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-24,10:02:00,20626,0,5341,11843,6529,5,6524,178,112,107,0,0,0,6,2,3.0,18,2,20,3
+161,SMS,241350,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-24,16:02:45,3663,0,451,2279,1364,2,1362,109,65,65,1,1,1,42,0,1.0,42,11,16,9
+162,WHATSAPP,241393,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-01-24,11:02:00,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+163,SMS,241417,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-24,17:02:00,83,0,12,69,36,0,36,6,4,4,0,0,0,1,0,0.0,2,0,1,0
+164,SMS,241407,5502,Explicit,DonePin_NotdoneEcom_Jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-24,10:02:15,26788,0,5732,16686,9435,5,9430,182,85,81,0,0,0,2,11,1.0,12,0,11,9
+165,SMS,236488,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,12:02:00,30006,0,2004,26864,13975,35,13945,722,481,464,20,18,20,290,4,28.0,279,115,365,290
+166,SMS,236518,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,12:02:00,10080,0,1418,5722,2954,28,2943,343,181,174,0,0,0,130,3,2.0,83,54,20,13
+167,EMAIL,241071,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,17:30:00,1329,0,0,1212,74,0,74,73,40,38,0,0,0,30,2,1.0,11,20,5,4
+168,WHATSAPP,241062,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,16:02:30,546,0,0,352,60,0,60,59,34,31,0,0,0,13,1,,18,6,13,11
+169,SMS,241070,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,15:02:30,1464,0,25,1404,914,9,909,343,234,227,0,0,0,199,7,0.0,166,40,18,11
+170,SMS,241376,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-23,10:02:00,490,0,2,469,226,1,225,15,9,7,6,6,6,6,0,1.0,5,1,0,0
+171,SMS,241349,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-22,16:02:45,5378,0,868,3295,1978,9,1970,145,95,95,1,1,1,60,2,0.0,60,18,33,28
+172,SMS,241416,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-22,17:02:00,78,0,11,65,32,2,30,5,2,2,0,0,0,2,0,0.0,1,1,0,0
+173,EMAIL,236469,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-22,11:00:00,30263,0,0,23103,149,0,149,140,96,90,6,6,6,41,1,10.0,41,35,66,53
+174,EMAIL,241068,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-22,17:30:00,1639,0,0,1495,137,0,137,135,54,52,0,0,0,40,0,0.0,6,36,4,2
+175,EMAIL,241065,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-21,17:30:00,1715,0,0,1542,85,0,85,85,50,49,0,0,0,31,1,1.0,8,26,9,5
+176,WHATSAPP,241056,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-21,16:02:30,713,0,0,363,53,0,53,52,31,30,0,0,0,18,0,,16,9,8,5
+177,SMS,236517,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-21,12:02:00,9649,0,1310,5522,3030,19,3015,240,264,179,0,0,0,136,2,2.0,103,42,28,19
+178,SMS,241372,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-01-21,11:02:00,3000,0,212,2621,1610,3,1608,56,40,40,31,31,31,31,0,2.0,13,18,0,0
+179,SMS,236487,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-21,12:02:00,31007,0,2040,27854,14634,58,14580,459,517,320,5,5,5,187,0,16.0,139,138,263,209
+180,SMS,241064,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-21,15:02:30,1892,0,29,1814,1224,20,1220,432,299,286,0,0,0,232,12,4.0,192,62,35,26
+181,WHATSAPP,236512,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-20,14:02:00,4299,0,0,2066,169,0,169,130,93,69,0,0,0,33,1,,33,20,29,18
+182,WHATSAPP,241053,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-20,16:02:30,889,0,0,391,59,0,59,7,37,6,0,0,0,3,0,,0,5,3,3
+183,EMAIL,241063,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-20,17:30:00,2013,0,0,1830,146,0,146,53,85,37,0,0,0,29,0,0.0,0,31,4,4
+184,EMAIL,236468,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-20,11:00:00,30940,0,0,24218,135,0,135,92,84,60,1,1,1,32,6,2.0,25,22,44,35
+185,SMS,241348,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-20,16:02:45,5654,0,892,3468,2052,11,2042,32,133,22,0,0,0,13,0,1.0,0,16,4,2
+186,SMS,241061,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-20,15:02:30,2122,0,22,2036,1244,25,1226,285,321,169,0,0,0,147,5,1.0,106,49,15,11
+187,SMS,236514,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,12:02:00,8685,0,1240,4870,2361,12,2352,205,118,101,0,0,0,69,2,1.0,39,37,17,12
+188,SMS,241367,6599,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_d805,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-01-19,11:02:00,2837,0,214,2446,1427,2,1425,45,26,26,24,21,24,24,0,0.0,15,9,0,0
+189,WHATSAPP,241050,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,16:02:30,369,0,0,158,29,0,29,25,18,15,0,0,0,7,0,,10,0,5,3
+190,SMS,236486,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,12:02:00,31873,0,2058,28177,13898,62,13840,656,464,388,8,7,8,230,8,11.0,260,74,311,251
+191,SMS,241415,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,17:02:00,17,0,2,14,7,0,7,1,1,1,0,0,0,0,1,0.0,0,0,0,0
+192,SMS,241058,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,15:02:30,1258,0,14,1216,769,11,767,327,229,210,0,0,0,183,1,0.0,154,40,23,16
+193,EMAIL,241060,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-19,17:30:00,1147,0,0,1079,78,0,78,68,39,28,0,0,0,20,0,1.0,5,13,3,2
+194,SMS,236513,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-18,12:02:00,9125,0,1267,5211,2446,31,2428,299,130,118,0,0,0,89,0,0.0,58,38,18,14
+195,SMS,236485,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-18,12:02:00,32323,0,2062,28427,13194,69,13132,641,406,384,5,5,5,242,4,2.0,284,65,330,269
+196,SMS,241366,6602,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_a5f2,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-18,12:02:00,10431,0,857,9032,5402,14,5389,221,157,139,123,111,119,117,1,1.0,86,34,1,1
+197,SMS,241406,5502,Explicit,DonePin_NotdoneEcom_Jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,10:02:15,26230,0,5756,16088,8220,13,8207,214,105,99,0,0,0,1,10,1.0,10,2,12,11
+198,EMAIL,241054,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,17:30:00,1600,0,0,1469,189,0,189,170,71,58,0,0,0,34,1,0.0,4,29,10,3
+199,WHATSAPP,241044,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,16:02:30,576,0,0,273,53,0,53,51,30,28,0,0,0,17,1,,12,8,11,8
+200,WHATSAPP,241392,1811,Utility,main_bucket_Jan_HYPSB_crd_rest_dec_strat_1_19972_20251220_c508ad_HYPCB_e7bc,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2026-01-17,11:02:00,9488,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+201,WHATSAPP,236510,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,14:02:00,4358,0,0,2071,157,0,157,153,84,80,0,0,0,48,2,,56,16,40,29
+202,SMS,241399,5721,Explicit,DoneEcom_notdonePin_Jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,10:02:00,19138,0,5077,10510,5132,15,5117,171,98,94,0,0,0,7,2,1.0,16,4,20,6
+203,SMS,241347,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-17,16:02:45,7976,0,2011,4493,2517,9,2509,134,91,86,0,0,0,53,1,0.0,51,19,34,30
+204,SMS,241414,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-17,17:02:00,19,0,2,17,9,0,9,2,1,1,0,0,0,1,0,0.0,1,0,0,0
+205,EMAIL,241051,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,17:30:00,2370,0,0,2150,114,0,114,107,59,54,0,0,0,45,1,1.0,14,34,6,3
+206,SMS,241368,6604,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_11da,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,10:02:00,7956,0,649,6876,3883,16,3868,99,66,63,47,43,46,46,0,0.0,28,18,0,0
+207,WHATSAPP,241041,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,16:02:30,1017,0,0,539,94,0,94,92,50,47,0,1,1,32,0,,29,6,10,7
+208,SMS,241049,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,15:02:30,2594,0,30,2487,1606,18,1598,518,370,358,0,0,0,281,7,0.0,257,55,47,32
+209,SMS,236511,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,12:02:00,8518,0,1311,4786,2829,10,2821,192,111,106,0,0,0,76,0,2.0,59,24,16,8
+210,SMS,236484,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-16,12:02:00,35195,0,2263,31045,15233,80,15159,704,466,442,12,10,10,276,5,7.0,292,100,360,294
+211,SMS,241413,6607,Implicit,ePayAmex762_SMS_Jan,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-15,17:02:00,16,0,2,14,5,0,5,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+212,EMAIL,236467,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-15,11:00:00,35352,0,0,27597,183,0,183,172,116,104,3,3,3,52,4,1.0,44,36,68,60
+213,SMS,241346,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-15,16:02:45,9861,0,2574,5563,3234,10,3224,173,103,100,5,4,5,67,4,0.0,64,21,40,32
+214,SMS,241369,6164,Implicit,main_bucket_Jan_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_0d91,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2026-01-14,11:02:00,8565,0,670,7382,4438,17,4422,287,173,171,124,118,122,121,1,2.0,94,29,1,1
+215,SMS,236483,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-14,12:02:00,36001,0,2278,31493,15605,80,15533,815,523,503,2,2,2,330,6,3.0,351,105,426,339
+216,SMS,236509,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-14,12:02:00,8329,0,1300,4756,2762,31,2742,241,134,131,0,0,0,100,2,0.0,74,34,23,15
+217,WHATSAPP,241035,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-14,16:02:30,552,0,0,238,44,0,44,44,21,21,0,0,0,12,0,,14,4,9,7
+218,SMS,241043,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-14,15:02:30,1575,0,21,1504,949,11,942,245,174,171,0,0,0,134,1,0.0,109,40,29,20
+219,EMAIL,241045,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-14,17:30:00,1482,0,0,1353,110,0,110,106,58,56,0,0,0,44,0,0.0,8,36,8,4
+220,SMS,241040,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-13,15:02:30,1998,0,10,1943,1129,25,1120,528,377,366,0,0,0,295,5,2.0,255,69,42,32
+221,WHATSAPP,241032,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-13,16:02:30,619,0,0,246,52,0,52,52,27,27,0,0,0,13,0,,15,7,11,9
+222,SMS,241345,6255,Explicit,main_RTG_JAN_HYPSB_crd_rest_dec_strat_1_19976_20251222_1f6b5c_HYPCB_cde1,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2026-01-13,16:02:45,10506,0,2673,5986,3561,22,3545,235,136,132,0,0,0,88,4,1.0,98,19,51,35
+223,EMAIL,236466,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-13,11:00:00,36761,0,0,28980,171,0,171,163,99,90,3,3,3,54,2,1.0,54,20,62,56
+224,EMAIL,241042,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-13,17:30:00,1805,0,0,1665,137,0,137,133,61,58,0,0,0,47,2,1.0,12,35,3,2
+225,WHATSAPP,236508,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-13,14:02:00,4223,0,0,1965,158,0,158,154,84,81,0,0,0,47,0,,48,21,50,39
+226,WHATSAPP,241030,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-12,16:02:30,1922,0,0,843,104,0,104,102,54,49,0,0,0,29,0,,39,4,25,14
+227,SMS,236507,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-12,12:02:00,6777,0,920,3775,2096,19,2081,164,96,90,0,0,0,56,1,1.0,43,20,16,9
+228,EMAIL,241039,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-12,17:30:00,3505,0,0,2956,137,0,137,129,68,66,0,0,0,50,2,1.0,23,33,18,16
+229,SMS,236481,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-12,12:02:00,46998,0,3016,41532,20147,98,20067,1066,717,690,64,56,62,425,9,31.0,414,152,458,351
+230,SMS,241037,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-12,15:02:30,3755,0,98,3554,2078,34,2069,648,456,448,0,0,0,336,8,3.0,299,102,111,82
+231,SMS,236505,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-11,12:02:00,7132,0,933,3880,1810,27,1792,206,113,110,0,0,0,73,3,1.0,64,16,16,9
+232,SMS,236480,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-11,12:02:00,47809,0,3031,41940,20335,70,20269,1120,720,692,10,9,10,432,5,18.0,493,118,546,443
+233,WHATSAPP,236506,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-10,14:02:00,3701,0,0,1725,187,0,187,185,98,97,0,0,0,65,0,,67,22,56,42
+234,SMS,236479,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-09,12:02:00,49459,0,3093,43986,21486,76,21424,1259,813,651,7,7,8,416,8,13.0,410,151,503,417
+235,SMS,241027,6592,Implicit,main_Current_Jan_HYPSB_CURRDAY_SMS_HYPCB_4011,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-09,15:02:30,2084,0,10,2034,1244,18,1237,585,436,420,0,0,0,345,7,6.0,269,101,30,24
+236,EMAIL,241026,2003,Promotional,main_Current_Jan_HYPSB_CURRDAY_EML_HYPCB_4689,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-09,17:30:00,1861,0,0,1719,156,0,156,151,74,68,0,0,0,51,2,3.0,12,40,5,3
+237,SMS,236503,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-09,12:02:00,7735,0,950,4310,2406,26,2390,467,284,239,0,0,0,201,5,1.0,149,61,18,13
+238,WHATSAPP,241025,1383,Utility,main_Current_Jan_HYPSB_CURRDAY_WA_HYPCB_eb91,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-09,16:02:30,638,0,0,305,49,0,49,49,21,21,0,0,0,12,0,,12,4,7,5
+239,EMAIL,236465,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-08,11:00:00,51961,0,0,39545,293,0,293,278,179,170,6,5,6,87,4,11.0,62,56,97,87
+240,SMS,236501,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-07,12:02:00,6362,0,944,3517,1989,37,1968,463,210,206,0,0,0,157,8,1.0,115,49,22,15
+241,SMS,236478,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-07,12:02:00,54491,0,3380,46931,24142,105,24049,1643,1069,1029,8,6,8,609,6,26.0,672,191,777,622
+242,EMAIL,236464,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-06,11:00:00,56313,0,0,43648,400,0,400,377,229,217,3,3,3,116,2,5.0,117,56,153,130
+243,WHATSAPP,236504,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-06,14:02:00,3143,0,0,1670,166,0,166,165,76,74,0,0,0,40,0,,58,16,67,53
+244,SMS,236499,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-05,12:02:00,3889,0,883,2166,1183,14,1171,116,75,74,0,0,0,54,4,0.0,50,7,24,19
+245,SMS,236477,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-05,12:02:00,60831,0,3607,54736,28888,130,28774,2243,1483,1441,5,4,5,914,14,22.0,977,285,1101,870
+246,SMS,236451,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-05,15:02:00,1834,0,40,1749,1085,23,1078,431,317,307,0,0,0,251,8,1.0,233,51,58,41
+247,SMS,236497,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-04,12:02:00,4044,0,897,2266,1250,16,1238,168,78,76,0,0,0,37,2,0.0,30,11,13,11
+248,SMS,236476,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-04,12:02:00,62727,0,3631,56193,29618,134,29506,2551,1679,1628,3,2,3,992,15,8.0,1206,203,1214,995
+249,SMS,236447,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-03,15:02:00,1717,0,38,1627,937,16,930,300,213,203,0,0,0,163,3,0.0,135,46,35,29
+250,WHATSAPP,236502,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-03,14:02:00,2661,0,0,1298,93,0,93,91,45,42,0,0,0,16,1,,12,9,19,12
+251,EMAIL,236459,2003,Promotional,main_5dec_HYPSB_CURRDAY_EML_HYPCB_102e,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-03,14:00:00,1714,0,0,1508,92,0,92,89,45,44,0,0,0,25,3,0.0,16,12,10,9
+252,WHATSAPP,236444,1383,Utility,main_5dec_HYPSB_CURRDAY_WA_HYPCB_858e,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-02,13:02:00,4778,0,0,2466,198,0,198,198,109,101,0,0,0,37,2,,44,21,54,41
+253,EMAIL,236458,2003,Promotional,main_5dec_HYPSB_CURRDAY_EML_HYPCB_102e,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-02,14:00:00,5517,0,0,4429,104,0,104,103,72,67,0,0,0,30,2,0.0,8,22,18,13
+254,SMS,236445,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-02,15:02:00,5526,0,309,5041,2869,15,2859,464,313,304,0,0,0,153,6,0.0,171,64,139,110
+255,SMS,236475,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-02,12:02:00,69951,0,3904,63269,33873,180,33725,3579,2305,2246,13,12,12,1440,36,35.0,1593,362,1479,1172
+256,SMS,236443,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2026-01-01,15:02:00,8032,0,406,7403,4377,43,4350,863,579,566,1,0,0,339,12,3.0,391,77,235,177
+257,EMAIL,236463,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2026-01-01,11:00:00,68493,0,0,53253,615,0,615,597,386,374,5,5,5,206,10,9.0,194,98,191,160
+258,SMS,236439,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-30,15:12:00,2905,0,76,2761,1623,16,1613,479,329,318,0,0,0,239,4,0.0,277,7,63,43
+259,WHATSAPP,236500,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-30,14:12:00,62318,0,0,27663,1382,0,1382,1345,596,580,0,0,0,238,5,,488,11,477,376
+260,EMAIL,236462,2002,Promotional,main_prev_JAN_HYPSB_PrvMnth_A_Crd_EML_nw_HYPCB_9a8a,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-30,11:00:00,994,0,0,866,3,0,3,3,2,2,1,1,1,1,0,0.0,1,0,0,0
+261,SMS,236437,6592,Implicit,main_5dec_HYPSB_CURRDAY_SMS_HYPCB_7adf,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-29,15:12:00,3283,0,29,3187,1948,38,1932,766,510,503,0,0,0,410,10,3.0,388,74,74,47
+262,SMS,236494,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-29,12:12:00,73419,0,21166,40225,22033,142,21912,808,419,411,0,0,0,208,5,30.0,192,85,198,157
+263,EMAIL,236454,2003,Promotional,main_5dec_HYPSB_CURRDAY_EML_HYPCB_102e,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-29,14:00:00,3300,0,0,3013,170,0,170,164,72,65,0,0,0,45,4,1.0,29,17,5,4
+264,SMS,236473,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-29,12:12:00,1176,0,54,1082,580,1,579,13,5,5,0,0,0,2,0,0.0,2,1,2,2
+265,SMS,236472,6593,Implicit,main_prev_JAN_HYPSB_PrevMonth_A_Card_SMS_N_HYPCB_3ea3,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-28,12:12:00,1198,0,54,1097,586,2,584,27,16,16,1,1,1,11,0,0.0,14,1,10,8
+266,SMS,236493,5517,Explicit,main_CURR_JAN_HYPSB_CurrMonth_A_Card_SMS_HYPCB_4280,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-28,12:12:00,74128,0,21271,40518,22086,165,21950,973,426,408,0,0,0,176,9,9.0,183,46,158,118
+267,WHATSAPP,236498,1383,Utility,main_CURR_JAN_HYPSB_CurrMnth_A_Card_WA_N_231225_HYPCB_d361,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-27,14:12:00,67605,0,0,32263,1773,0,1773,1740,719,688,0,0,0,218,6,,374,128,470,365
+268,EMAIL,236283,2002,Promotional,PrvMnth_A_Crd_EML_nw,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-25,09:00:00,1439,0,0,1261,6,0,6,6,4,3,0,0,0,2,0,0.0,1,1,1,1
+269,SMS,236271,6592,Implicit,CURRDAY_SMS,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-24,15:12:45,2581,0,69,2455,1455,33,1440,522,372,364,0,0,0,297,11,4.0,241,79,47,38
+270,SMS,236281,6593,Implicit,PrevMonth_A_Card_SMS_N,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-24,16:12:45,1453,0,62,1323,719,7,713,29,11,10,1,0,0,6,0,0.0,4,4,6,5
+271,SMS,236282,5517,Explicit,CurrMonth_A_Card_SMS,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-24,16:12:45,44081,0,12419,24041,13076,92,13000,761,451,441,0,0,0,278,7,37.0,213,117,192,150
+272,EMAIL,236272,2003,Promotional,CURRDAY_EML,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-24,17:30:00,2574,0,0,2250,105,0,105,102,48,47,0,0,0,29,2,0.0,14,16,5,4
+273,WHATSAPP,236275,1383,Utility,CURRDAY_WA,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-24,16:12:30,1338,0,0,559,52,0,52,51,28,28,0,0,0,17,0,,19,4,13,8
+274,WHATSAPP,236247,1383,Utility,CurrMnth_A_Card_WA_N_231225,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-23,16:12:30,43669,0,0,19917,1552,0,1552,1516,773,742,0,0,0,287,6,,418,139,525,402
+275,EMAIL,235610,2003,Promotional,crd_rest_dec_strat_1_19960_20251222_feb779,,Set the PIN for your new IndusInd Bank Credit Card to activate it instantly.,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-22,10:30:00,53350,0,0,42514,785,0,785,751,475,464,0,0,0,323,11,30.0,219,146,288,245
+276,WHATSAPP,235609,1383,Utility,crd_rest_dec_strat_1_19958_20251222_bd4ec5,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-22,10:12:30,1094,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+277,EMAIL,235611,2003,Promotional,crd_rest_dec_strat_1_19957_20251222_2b70bb,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-22,10:30:00,1864,0,0,1483,9,0,9,9,4,3,1,1,1,2,0,0.0,0,2,1,1
+278,SMS,235607,6255,Explicit,crd_rest_dec_strat_1_19976_20251222_1f6b5c,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-22,10:12:30,21953,0,6496,11949,6057,31,6032,576,375,367,1,0,1,176,9,9.0,245,49,234,177
+279,SMS,235608,6607,Implicit,crd_rest_dec_strat_1_19975_20251222_8aa387,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-22,10:12:30,8,0,0,8,3,0,3,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+280,SMS,235617,6164,Implicit,crd_rest_dec_strat_1_19956_20251221_051fb3,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/,2025-12-21,10:12:30,1911,0,80,1777,931,3,928,63,37,33,0,0,0,16,0,1.0,20,5,19,14
+281,SMS,235616,6593,Implicit,crd_rest_dec_strat_1_19959_20251221_f8c66e,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-21,10:12:30,55927,0,2967,50181,24359,157,24240,3120,2123,2063,0,0,0,1406,26,45.0,1360,472,1339,1095
+282,SMS,235615,6602,Implicit,crd_rest_dec_strat_1_19970_20251221_54840f,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-21,10:12:30,629,0,25,585,303,0,303,15,10,10,8,8,8,8,0,2.0,4,4,0,0
+283,WHATSAPP,235567,1811,Utility,crd_rest_dec_strat_1_19972_20251220_c508ad,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2025-12-20,10:12:30,209,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+284,WHATSAPP,235564,1383,Utility,crd_rest_dec_strat_1_19977_20251220_8fef80,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-20,10:12:30,53026,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,0,0,0
+285,SMS,235561,5502,Explicit,crd_rest_dec_strat_1_19071_20251220_918143,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/,2025-12-20,10:12:30,21707,0,5614,13607,6766,25,6742,242,115,115,0,0,0,3,8,2.0,11,3,14,10
+286,SMS,235563,5721,Explicit,crd_rest_dec_strat_1_19070_20251220_2d8177,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/,2025-12-20,10:12:30,10825,0,3543,6096,2985,9,2976,92,42,41,0,0,0,5,0,1.0,6,0,6,0
+287,SMS,235565,6255,Explicit,crd_rest_dec_strat_1_19976_20251220_c88448,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-20,10:12:30,23704,0,7060,12748,6223,41,6190,611,366,360,1,1,1,150,7,3.0,228,49,224,180
+288,SMS,235566,6607,Implicit,crd_rest_dec_strat_1_19975_20251220_93e78e,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-20,10:12:30,7,0,0,6,2,0,2,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+289,SMS,235620,6164,Implicit,crd_rest_dec_strat_1_19970_20251219_f2730c,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-19,10:12:30,682,0,21,643,344,1,343,18,11,11,8,7,8,6,2,2.0,6,2,0,0
+290,SMS,235622,6668,Implicit,crd_rest_dec_strat_1_19956_20251219_92778b,,"DEACTIVATION ALERT!
+Your new Credit Card x{#var1#} will be cancelled if not activated per RBI guidelines.
+Activate NOW: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-19,10:12:30,2196,0,88,2059,1075,5,1070,44,26,24,1,1,1,19,0,0.0,14,7,9,8
+291,SMS,235621,6600,Implicit,crd_rest_dec_strat_1_19959_20251219_9761fd,,"URGENT ACTION!
+As per RBI guidelines, your new Credit Card x{#var1#} must be activated to avoid cancellation.
+PROCEED: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-19,10:12:30,61886,0,3209,55754,26966,304,26706,3607,2125,2072,0,0,0,904,11,47.0,1320,303,1367,1095
+292,EMAIL,217121,2002,Promotional,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_EML_ThuTill31oct_HYPCB_ab8a,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,10:00:00,62991,0,0,49936,531,0,531,507,295,288,0,0,0,135,4,4.0,104,77,116,90
+293,EMAIL,216725,2002,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_ThuTill31oct_HYPCB_0c05,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,09:00:00,2314,0,0,2010,12,0,12,11,5,5,1,1,1,3,0,0.0,1,3,2,1
+294,SMS,216961,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,15:12:30,1517,0,13,1479,946,23,935,426,285,280,0,0,0,239,9,1.0,225,31,26,18
+295,EMAIL,216943,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,17:30:00,1346,0,0,1251,69,0,69,69,32,29,0,0,0,21,1,0.0,9,12,1,1
+296,SMS,217367,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,17:12:00,11,0,0,10,4,0,4,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+297,SMS,217380,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-18,16:12:00,12060,0,4472,6193,3095,33,3066,267,169,165,0,0,0,87,1,2.0,97,37,95,78
+298,WHATSAPP,216727,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-18,16:12:30,473,0,0,207,36,0,36,36,16,16,0,0,0,8,0,,9,4,7,2
+299,WHATSAPP,216724,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-17,16:12:30,13986,0,0,6553,637,0,637,626,251,241,0,0,0,59,2,,102,55,150,112
+300,EMAIL,216939,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-17,17:30:00,15258,0,0,11406,165,0,165,158,79,74,0,0,0,37,2,0.0,16,23,20,18
+301,SMS,216669,6593,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_WedTill31oct_HYPCB_5763,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-17,10:12:00,2442,0,99,2277,1178,8,1171,57,28,28,1,2,2,21,1,0.0,15,8,12,11
+302,SMS,217252,6164,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_4387,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-17,10:12:00,850,0,24,806,442,1,442,21,13,13,8,8,8,7,0,3.0,8,0,0,0
+303,SMS,217098,5517,Explicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_WedTill31oct_HYPCB_ac05,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-17,10:12:00,50759,0,15517,27932,12882,131,12771,913,498,486,0,0,0,273,4,7.0,218,128,210,167
+304,SMS,216957,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-17,15:12:30,15747,0,714,14539,8118,105,8040,1483,864,837,0,0,0,375,18,11.0,505,130,372,263
+305,WHATSAPP,217017,1383,Utility,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_WA_SatTill31oct_HYPCB_a9c2,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,17:12:00,44772,0,0,20907,1513,0,1513,1484,658,625,0,0,0,178,8,,179,220,372,282
+306,WHATSAPP,216721,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,16:12:30,625,0,0,281,62,0,62,62,26,26,0,0,0,12,0,,14,6,14,8
+307,WHATSAPP,216621,1820,Utility,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_WA_TueTill310ct_HYPCB_0131,,"Dear Cardholder,
+
+Kindly activate your new {#var1#} Credit card _ending with xx{#var2#}_ by setting your secured PIN instantly.
+
+Click the button below to activate ⬇️",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,17:12:00,1308,0,0,581,23,0,23,22,9,9,0,0,0,6,0,,3,5,4,4
+308,SMS,216953,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,15:12:30,1860,0,20,1814,1141,27,1125,463,322,315,0,0,0,254,10,1.0,235,47,41,30
+309,EMAIL,216934,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,17:30:00,1672,0,0,1500,78,0,78,76,41,40,0,0,0,31,0,2.0,7,26,8,5
+310,EMAIL,216940,2003,Promotional,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_EML_TueTill31oct_HYPCB_7b88,,Set the PIN for your new IndusInd Bank Credit Card to activate it instantly.,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,09:00:00,51071,0,0,39182,632,0,632,604,337,323,0,0,0,179,4,9.0,91,106,102,78
+311,EMAIL,216619,2003,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_TueTill31oct_HYPCB_0d65,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-16,09:00:00,2634,0,0,2259,31,0,31,30,16,14,1,1,1,11,0,1.0,5,6,4,3
+312,SMS,217378,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-16,16:12:00,13088,0,4819,6730,3415,33,3391,344,191,185,0,0,0,80,3,1.0,76,31,45,37
+313,SMS,216599,6668,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_MonTill31oct_HYPCB_d443,,"DEACTIVATION ALERT!
+Your new Credit Card x{#var1#} will be cancelled if not activated per RBI guidelines.
+Activate NOW: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-15,10:12:00,3265,0,126,3029,1582,31,1551,109,71,69,6,6,6,40,1,3.0,45,12,30,23
+314,SMS,216860,6593,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_MonTill31oct_HYPCB_7a3c,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-15,10:12:00,16111,0,897,14581,6760,197,6574,813,492,477,0,0,0,261,9,17.0,214,86,116,91
+315,SMS,217229,6599,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_89a3,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-15,10:12:00,384,0,13,357,194,1,193,8,5,5,4,4,4,4,0,1.0,4,0,0,0
+316,SMS,217364,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-15,17:12:00,15,0,2,13,7,2,5,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+317,SMS,217280,6602,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_83c8,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-14,12:12:00,540,0,17,504,277,5,272,8,5,5,2,2,2,2,0,2.0,2,0,0,0
+318,SMS,216685,6593,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_WedTill31oct_HYPCB_d6cf,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-14,12:12:00,3325,0,127,3092,1621,42,1579,72,47,47,5,4,4,31,1,2.0,23,10,16,11
+319,SMS,217228,6600,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_SunTill31oct_HYPCB_121a,,"URGENT ACTION!
+As per RBI guidelines, your new Credit Card x{#var1#} must be activated to avoid cancellation.
+PROCEED: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-14,12:12:00,16561,0,898,14891,6512,208,6319,878,463,450,0,0,0,187,4,7.0,209,29,109,74
+320,WHATSAPP,216778,1383,Utility,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_WA_SatTill31oct_HYPCB_e6b9,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-13,10:12:30,1660,0,0,838,48,0,48,47,23,22,0,1,1,8,0,,13,5,15,11
+321,WHATSAPP,217307,1811,Utility,Main_1novTo28Feb_HYPSB_B31TO37_OX_WA_SatTill31oct_HYPCB_854f,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2025-12-13,10:12:00,188,0,0,171,20,0,20,19,14,14,10,9,10,6,0,,9,1,0,0
+322,WHATSAPP,217038,1383,Utility,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_WA_SatTill31oct_HYPCB_873f,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-13,10:12:30,13260,0,0,5903,323,0,323,322,154,147,0,0,0,54,1,,61,26,68,53
+323,SMS,217361,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-13,17:12:00,16,0,2,14,8,0,8,1,1,1,0,0,0,1,0,0.0,2,0,1,0
+324,SMS,217376,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-13,16:12:00,5353,0,1244,3229,1724,41,1683,130,72,71,1,1,1,42,0,0.0,37,19,24,11
+325,SMS,217346,5721,Explicit,DoneEcom_NotDonePIN_1novTo31jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-13,15:12:30,9831,0,3373,5616,2679,62,2617,69,29,28,0,0,0,4,0,1.0,3,0,3,1
+326,SMS,217175,5502,Explicit,DonePIN_NotDoneEcom_1novTo31jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-13,15:12:30,21846,0,5788,13890,6859,168,6693,253,120,116,0,0,0,1,9,6.0,9,1,10,5
+327,WHATSAPP,216712,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,16:12:30,8816,0,0,3740,227,0,227,223,80,76,0,0,0,12,2,,32,5,29,20
+328,SMS,216738,6606,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_FriTill31oct_HYPCB_a12f,,"Reminder to Activate!
+Your IndusInd Bank Credit Card x{#var1#} needs activation.
+Set your PIN now to avoid deactivation: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,10:12:00,3623,0,136,3362,1727,37,1692,76,51,51,0,0,0,40,0,2.0,34,10,19,17
+329,SMS,217277,6604,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_d00d,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,10:12:00,607,0,25,558,293,9,284,15,9,9,8,8,8,7,1,1.0,6,2,0,0
+330,SMS,217196,6608,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_FriTill31oct_HYPCB_da36,,"Activate Now!
+As per RBI guidelines, activate your IndusInd Bank Credit Card to continue using it.
+Set your PIN here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,10:12:00,8500,0,315,7915,4264,110,4162,542,289,283,0,0,0,213,5,4.0,178,50,57,46
+331,SMS,216938,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,15:12:30,10193,0,604,9220,4432,172,4277,850,513,500,0,0,0,294,9,3.0,308,66,126,94
+332,EMAIL,216918,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-12,17:30:00,9834,0,0,6958,115,0,115,110,63,61,0,0,0,28,2,1.0,6,24,12,7
+333,EMAIL,216914,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,17:30:00,1385,0,0,1307,59,0,59,59,23,22,0,0,0,18,1,0.0,3,17,3,3
+334,EMAIL,216722,2002,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_ThuTill31oct_HYPCB_0c05,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,09:00:00,3862,0,0,3253,29,0,29,28,19,18,0,0,0,12,1,0.0,4,9,4,4
+335,EMAIL,217117,2002,Promotional,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_EML_ThuTill31oct_HYPCB_ab8a,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,10:00:00,8292,0,0,6648,184,0,184,177,100,100,0,0,0,59,2,2.0,43,26,14,11
+336,WHATSAPP,216709,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,16:12:30,456,0,0,222,34,0,34,34,13,13,0,0,0,8,0,,10,0,3,3
+337,SMS,216935,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,15:12:30,1540,0,12,1507,957,28,931,381,260,255,0,0,0,211,6,1.0,198,36,32,20
+338,SMS,217357,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-11,17:12:00,16,0,2,14,6,0,6,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+339,SMS,217374,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-11,16:12:00,4937,0,1285,2947,1597,32,1565,101,60,59,0,0,0,39,2,1.0,37,8,24,18
+340,SMS,217249,6164,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_4387,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-10,10:12:00,809,0,35,747,424,10,414,30,21,21,17,17,15,14,0,2.0,12,3,0,0
+341,SMS,216666,6593,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_WedTill31oct_HYPCB_5763,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-10,10:12:00,4143,0,148,3869,2036,41,1995,155,96,92,2,1,1,69,2,9.0,56,23,33,29
+342,SMS,217094,5517,Explicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_WedTill31oct_HYPCB_ac05,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-10,10:12:00,7503,0,1336,4515,2511,76,2442,345,200,200,0,0,0,144,6,4.0,118,37,30,22
+343,EMAIL,216911,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-10,17:30:00,1910,0,0,1737,117,0,117,115,49,48,0,0,0,30,1,0.0,1,30,1,1
+344,WHATSAPP,216707,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-10,16:12:30,790,0,0,386,65,0,65,63,33,33,0,0,0,12,0,,15,8,16,13
+345,WHATSAPP,216705,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,16:12:30,867,0,0,381,63,0,63,62,30,29,0,0,0,16,2,,15,5,5,5
+346,WHATSAPP,216617,1820,Utility,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_WA_TueTill310ct_HYPCB_0131,,"Dear Cardholder,
+
+Kindly activate your new {#var1#} Credit card _ending with xx{#var2#}_ by setting your secured PIN instantly.
+
+Click the button below to activate ⬇️",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,17:12:00,1949,0,0,907,58,0,58,53,33,27,0,0,0,14,0,,9,10,15,15
+347,EMAIL,216908,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,17:30:00,1990,0,0,1810,116,0,116,111,49,49,0,0,0,37,1,0.0,1,37,2,1
+348,EMAIL,216937,2003,Promotional,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_EML_TueTill31oct_HYPCB_7b88,,Set the PIN for your new IndusInd Bank Credit Card to activate it instantly.,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,09:00:00,6881,0,0,5423,130,0,130,125,81,75,0,0,0,56,1,0.0,39,21,28,26
+349,EMAIL,216615,2003,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_TueTill31oct_HYPCB_0d65,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,09:00:00,4587,0,0,4045,41,0,41,39,18,18,0,0,0,13,1,0.0,10,4,3,3
+350,WHATSAPP,217012,1383,Utility,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_WA_SatTill31oct_HYPCB_a9c2,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-09,17:12:00,3972,0,0,1420,106,0,106,104,43,42,0,0,0,23,2,,23,11,29,24
+351,SMS,217372,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-09,16:12:00,5659,0,1461,3422,1869,40,1831,156,92,92,0,0,0,60,1,3.0,58,14,37,28
+352,EMAIL,216905,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,17:30:00,1934,0,0,1640,59,0,59,57,32,30,0,0,0,17,1,2.0,10,9,7,6
+353,WHATSAPP,216703,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,16:12:30,1198,0,0,507,61,0,61,60,30,28,0,0,0,13,0,,11,6,8,7
+354,SMS,216595,6668,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_MonTill31oct_HYPCB_d443,,"DEACTIVATION ALERT!
+Your new Credit Card x{#var1#} will be cancelled if not activated per RBI guidelines.
+Activate NOW: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,10:12:00,5302,0,182,4973,2650,65,2588,293,183,179,4,4,4,113,4,5.0,122,28,71,55
+355,SMS,217354,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,17:12:00,16,0,2,14,6,0,6,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+356,SMS,217227,6599,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_89a3,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-08,10:12:00,499,0,17,463,228,10,218,15,10,10,6,5,6,4,0,2.0,6,0,0,0
+357,SMS,216922,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,15:12:30,2055,0,83,1939,1191,37,1162,350,239,228,0,0,0,173,5,1.0,151,50,73,58
+358,SMS,216856,6593,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_MonTill31oct_HYPCB_7a3c,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-08,10:12:00,7030,0,313,6525,3500,85,3425,562,363,354,0,0,0,267,7,2.0,245,63,145,111
+359,SMS,217278,6602,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_SunTill31oct_HYPCB_83c8,,"URGENT!
+Please activate your new IndusInd Bank Credit Card x{#var1#} to avoid cancellation per RBI guidelines.
+Activate: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-07,12:12:00,632,0,25,593,322,8,314,14,10,10,8,7,8,8,1,0.0,8,0,0,0
+360,SMS,217226,6600,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_SunTill31oct_HYPCB_121a,,"URGENT ACTION!
+As per RBI guidelines, your new Credit Card x{#var1#} must be activated to avoid cancellation.
+PROCEED: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-07,12:12:00,7686,0,316,7144,3847,101,3756,727,460,448,0,0,0,296,3,2.0,349,40,181,142
+361,SMS,216682,6593,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_WedTill31oct_HYPCB_d6cf,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-07,12:12:00,5500,0,185,5151,2670,51,2619,252,147,147,0,0,0,104,2,3.0,93,34,46,36
+362,SMS,217172,5502,Explicit,DonePIN_NotDoneEcom_1novTo31jan,,"Dear Cardholder,
+Activate domestic online transactions on your IndusInd Bank Credit Card for a seamless payment experience.
+Click here: {#var1#} 
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,15:12:30,22957,0,5726,14584,7210,159,7055,311,145,141,0,0,0,0,17,10.0,1,0,1,0
+363,WHATSAPP,217034,1383,Utility,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_WA_SatTill31oct_HYPCB_873f,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,10:12:30,5259,0,0,2564,268,0,268,264,122,119,0,0,0,66,1,,77,20,84,67
+364,WHATSAPP,216774,1383,Utility,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_WA_SatTill31oct_HYPCB_e6b9,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,10:12:30,2709,0,0,1163,75,0,75,72,34,33,0,0,0,9,3,,20,5,22,18
+365,EMAIL,216898,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,17:30:00,1411,0,0,1298,92,0,92,89,41,40,0,0,0,24,0,0.0,4,22,3,1
+366,SMS,217370,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-06,16:12:00,6031,0,1561,3616,1962,63,1903,167,111,111,0,0,0,52,4,1.0,64,18,56,45
+367,SMS,217351,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,17:12:00,15,0,2,13,6,0,6,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+368,SMS,217343,5721,Explicit,DoneEcom_NotDonePIN_1novTo31jan,,"Dear Cardholder, Manage your IndusInd Bank Credit Card transaction preferences & limits anytime from your mobile on the go.
+Visit: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,15:12:30,10267,0,3241,5839,2668,55,2613,105,54,54,0,0,0,3,0,7.0,6,2,8,0
+369,WHATSAPP,217301,1811,Utility,Main_1novTo28Feb_HYPSB_B31TO37_OX_WA_SatTill31oct_HYPCB_854f,,"Dear {#var1#},
+
+Your {#var2#} Credit Card XX{#var3#} is blocked due to inactivity as per RBI guidelines.
+
+Please provide your consent by clicking the button below ⬇️ to unblock the card & prevent permanent cancellation.",https://pay.indusind.bank.in/crd/#/block/,2025-12-06,10:12:00,171,0,0,161,18,0,18,17,8,8,5,5,5,5,0,,5,0,0,0
+370,WHATSAPP,216698,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-06,16:12:30,485,0,0,211,41,0,41,41,21,20,0,0,0,12,2,,12,4,9,7
+371,SMS,217275,6604,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_FriTill31oct_HYPCB_d00d,,"IMPORTANT!
+Dear Cardholder, set your PIN to activate your new IndusInd Bank Credit Card & avoid deactivation.
+LOGIN: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,10:12:00,646,0,23,601,327,7,320,16,11,10,9,8,9,9,0,1.0,6,3,0,0
+372,SMS,216735,6606,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_FriTill31oct_HYPCB_a12f,,"Reminder to Activate!
+Your IndusInd Bank Credit Card x{#var1#} needs activation.
+Set your PIN now to avoid deactivation: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,10:12:00,6882,0,202,6504,3409,91,3321,312,195,191,3,3,3,142,4,2.0,130,33,60,46
+373,WHATSAPP,216695,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,16:12:30,501,0,0,238,44,0,44,44,21,19,0,0,0,8,1,,8,6,10,8
+374,SMS,216912,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,15:12:30,1492,0,21,1444,872,37,846,358,245,240,0,0,0,196,6,1.0,163,49,27,21
+375,SMS,217192,6608,Implicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_FriTill31oct_HYPCB_da36,,"Activate Now!
+As per RBI guidelines, activate your IndusInd Bank Credit Card to continue using it.
+Set your PIN here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,10:12:00,7085,0,354,6530,3413,98,3323,389,251,241,0,0,0,163,3,4.0,146,46,75,56
+376,EMAIL,216894,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-05,17:30:00,1350,0,0,1253,67,0,67,64,31,30,0,0,0,20,1,1.0,8,12,0,0
+377,EMAIL,216890,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,17:30:00,1276,0,0,1184,61,0,61,59,28,26,0,0,0,12,1,0.0,3,10,3,2
+378,WHATSAPP,216692,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,16:12:30,406,0,0,184,23,0,23,23,11,11,0,0,0,7,1,,6,2,3,3
+379,SMS,217348,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,17:12:00,16,0,2,12,6,0,6,1,0,0,0,0,0,0,0,0.0,0,0,0,0
+380,SMS,216909,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,15:12:30,1435,0,5,1413,874,29,852,378,245,235,0,0,0,200,9,0.0,184,32,23,16
+381,SMS,217368,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-04,16:12:00,3370,0,732,2227,1190,34,1159,108,68,65,0,0,0,48,0,1.0,42,14,14,10
+382,EMAIL,216719,2002,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_ThuTill31oct_HYPCB_0c05,,URGENT! Enable your NEW IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,09:00:00,7671,0,0,6684,110,0,110,105,63,61,2,2,2,44,4,4.0,32,20,16,11
+383,EMAIL,217113,2002,Promotional,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_EML_ThuTill31oct_HYPCB_ab8a,,Enable domestic online transactions on your IndusInd Bank Credit Card,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-04,10:00:00,6269,0,0,4829,85,0,85,84,37,36,0,0,0,19,2,1.0,10,10,4,3
+384,WHATSAPP,216689,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-03,16:12:30,5105,0,0,2129,209,0,209,205,102,97,0,0,0,26,3,,36,21,51,35
+385,SMS,217091,5517,Explicit,Main_1novTo28Feb_HYPSB_CurrMonth_A_Card_SMS_WedTill31oct_HYPCB_ac05,,"Dear {#var1#}, Congratulations on receiving your new IndusInd Bank Credit Card. To start using your new card, it is important to activate it: {#var2#} Please follow the steps below:
+
+Set your PIN: click on ""Setup PIN"" to set a secure PIN.
+Update preferences and limits: Click on ""Manage/Set Limits"" and adjust the settings as per your choice.
+
+Failure to complete these steps will prevent you from using your new card.
+
+Thank you,
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-03,10:12:00,609,0,10,437,253,8,246,58,33,31,0,0,0,26,0,0.0,17,9,1,1
+386,EMAIL,216886,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-03,17:30:00,6091,0,0,4847,92,0,92,92,47,45,0,0,0,21,0,1.0,9,19,14,12
+387,SMS,216664,6593,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_WedTill31oct_HYPCB_5763,,"Reminder: Activate your new IndusInd Bank Credit Card x{#var1#} by setting a PIN instantly.
+Proceed Now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-03,10:12:00,8772,0,216,8366,4538,112,4432,679,447,427,0,0,0,324,8,6.0,291,66,94,66
+388,SMS,216906,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-03,15:12:30,6333,0,352,5791,3301,88,3224,734,452,445,0,0,0,264,7,2.0,285,76,152,106
+389,SMS,217246,6164,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_WedTill31oct_HYPCB_4387,,"IMMEDIATE ACTION NEEDED!
+As per RBI guidelines, your Credit Card will be cancelled if not activated now. Click on the Link {#var1#} and activate your card now to avoid cancellation
+- IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-03,10:12:00,765,0,24,710,412,14,400,34,23,22,16,14,16,17,1,3.0,14,3,0,0
+390,EMAIL,216611,2003,Promotional,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_EML_TueTill31oct_HYPCB_0d65,,Set your IndusInd Bank Credit Card PIN & enjoy the benefits,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-02,09:00:00,10045,0,0,8825,231,0,231,222,133,125,1,1,1,84,2,4.0,51,37,17,15
+391,EMAIL,216882,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-02,17:30:00,928,0,0,877,63,0,63,63,29,27,0,0,0,23,0,1.0,11,12,2,2
+392,SMS,217365,6255,Explicit,Main_1novTo28Feb_HYPSB_B4_37_AXTimePrim_SMS_TTSaTill31oct_HYPCB_6cc9,,"Dear {#var1#}, This is an urgent reminder to activate your new IndusInd Bank Visa Credit Card to avoid Card cancellation. By activating your Card today, you will also get a complimentary Times Prime membership worth INR 1199.
+To activate your Card for usage, click: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/manage/timhjoiuytfghjiy/,2025-12-02,16:12:00,3478,0,804,2306,1256,33,1225,114,68,68,0,0,0,44,1,1.0,51,5,17,12
+393,SMS,216903,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-02,15:12:30,1038,0,6,1015,658,21,644,285,192,191,0,0,0,160,4,0.0,136,32,13,10
+394,WHATSAPP,216686,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-02,16:12:30,195,0,0,85,17,0,17,16,8,7,0,0,0,5,0,,5,2,2,2
+395,WHATSAPP,216613,1820,Utility,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_WA_TueTill310ct_HYPCB_0131,,"Dear Cardholder,
+
+Kindly activate your new {#var1#} Credit card _ending with xx{#var2#}_ by setting your secured PIN instantly.
+
+Click the button below to activate ⬇️",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-02,17:12:00,3529,0,0,1659,178,0,178,173,88,86,0,0,0,47,0,,39,25,43,29
+396,EMAIL,216878,2003,Promotional,Main_1novTo28Feb_HYPSB_CURRDAY_EML_DailyTill31Oct_HYPCB_998f,,Important communication for your NEW IndusInd Bank Credit Card…,https://pay.indusind.bank.in/crd/#/managev2/,2025-12-01,17:30:00,2290,0,0,2118,113,0,113,109,55,50,0,0,0,26,2,0.0,16,12,7,5
+397,SMS,216593,6668,Implicit,Main_1novTo28Feb_HYPSB_PrevMonth_A_Card_SMS_MonTill31oct_HYPCB_d443,,"DEACTIVATION ALERT!
+Your new Credit Card x{#var1#} will be cancelled if not activated per RBI guidelines.
+Activate NOW: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-01,10:12:00,9523,0,195,9105,5098,93,5014,1111,714,696,1,1,1,480,16,15.0,503,90,216,152
+398,SMS,216900,6592,Implicit,Main_1novTo28Feb_HYPSB_CURRDAY_SMS_DailyTill31Oct_HYPCB_9ad8,,"Activate Your New Credit Card x{#var1#}
+Transactions will not proceed until your card is activated.
+ACTIVATE now: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-01,15:12:30,2610,0,22,2551,1719,68,1667,843,572,557,0,0,0,446,13,4.0,409,79,69,52
+399,SMS,217345,6607,Implicit,Main_1novTo28Feb_HYPSB_ePayAmex762_SMS_MoThSaTill31oct_HYPCB_d89f,,"Activate Your Card!
+Set your PIN & activate your IndusInd Bank Credit Card to enjoy seamless transactions.
+Start here: {#var1#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-01,17:12:00,15,0,2,9,3,1,2,0,0,0,0,0,0,0,0,0.0,0,0,0,0
+400,SMS,217225,6599,Implicit,Main_1novTo28Feb_HYPSB_B31TO37_OX_SM_MonTill31oct_HYPCB_89a3,,"ALERT!
+You have not set a PIN for your new Credit Card x{#var1#}. Activate your card now to avoid cancellation.
+Set PIN: {#var2#} - IndusInd Bank",https://pay.indusind.bank.in/crd/#/block/,2025-12-01,10:12:00,520,0,27,474,257,6,251,16,10,9,9,8,9,8,0,0.0,8,1,0,0
+401,WHATSAPP,216683,1383,Utility,Main_1novTo28Feb_HYPSB_CURRDAY_WA_DailyTill31oct_HYPCB_6215,,"Dear {#var1#},
+
+You need to activate your new Credit Card ending with xx{#var2#} to perform any transactions.",https://pay.indusind.bank.in/crd/#/managev2/,2025-12-01,16:12:30,651,0,0,261,53,0,53,49,19,19,0,0,0,9,0,,13,3,10,9
