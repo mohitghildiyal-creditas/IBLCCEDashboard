@@ -344,11 +344,27 @@ TABLE_HEADER_STYLE = [
 # ================================================================
 # SECTION 1 : MONTHLY ACTIVATION SUMMARY
 # ================================================================
+_s1_csv = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
+_df_s1  = pd.read_csv(_s1_csv)
+
+import datetime as _dt
+def _fmt(m):
+    try:
+        return _dt.datetime.strptime(str(int(m)), "%Y%m").strftime("%b'%y")
+    except:
+        return str(m)
+
+_grp = _df_s1.groupby("MonthYear", as_index=False).agg(
+    Sourced=("Total_CUID", "sum"),
+    Activated=("OverallActivated", "sum")
+).sort_values("MonthYear")
+_grp["Month"] = _grp["MonthYear"].apply(_fmt)
+
 with st.expander("Monthly Activation Summary", expanded=True):
     data = {
-        "Month":     ["Jul'25", "Aug'25", "Sep'25", "Nov'25", "Dec'25"],
-        "Sourced":   [65622, 60691, 45932, 45257, 33801],
-        "Activated": [59243, 55731, 37846, 41670, 30805],
+        "Month":     _grp["Month"].tolist(),
+        "Sourced":   _grp["Sourced"].tolist(),
+        "Activated": _grp["Activated"].tolist(),
     }
     df_summary = pd.DataFrame(data)
     df_summary["Activated %"] = round((df_summary["Activated"] / df_summary["Sourced"]) * 100, 2)
@@ -399,7 +415,7 @@ with st.expander("Monthly Activation Summary", expanded=True):
 # ================================================================
 # SECTION 2 : DAY-WISE ACTIVATION SUMMARY
 # ================================================================
-csv_path = "data/dec-feb.csv"
+csv_path = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
 
 # --- load & preprocess outside expander ---
 if os.path.exists(csv_path):
@@ -462,11 +478,11 @@ with st.expander("Day-wise Activation Summary", expanded=True):
                                  label_visibility="collapsed", key="view_mode_pills")
 
         if activation_view == "Creditas Activated":
-            df_act = df_filtered[df_filtered["CreditasActivated"] == 1].copy()
+            df_act = df_filtered[df_filtered["CreditasActivated"] > 0].copy()
         elif activation_view == "Bank Activated":
-            df_act = df_filtered[df_filtered["BankActivated"] == 1].copy()
+            df_act = df_filtered[df_filtered["BankActivated"] > 0].copy()
         else:
-            df_act = df_filtered[df_filtered["OverallActivated"] == 1].copy()
+            df_act = df_filtered[df_filtered["OverallActivated"] > 0].copy()
 
         if date_view == "Received Date":
             date_col = "ReceivedDate"
@@ -492,7 +508,7 @@ with st.expander("Day-wise Activation Summary", expanded=True):
 
             df_cuid_base = df_filtered.groupby("ReceivedDate", as_index=False)["Total_CUID"].sum()
             df_grouped = df_pivot.merge(df_cuid_base, on="ReceivedDate", how="left").sort_values("ReceivedDate")
-            act_grp = df_act.groupby("ReceivedDate", as_index=False)["Total_Activation"].sum()
+            act_grp = df_act.groupby("ReceivedDate", as_index=False)["OverallActivated"].sum()
             df_grouped = df_grouped.merge(act_grp, on="ReceivedDate", how="left")
         else:
             date_col = "AccountOpeningDate"
@@ -501,13 +517,13 @@ with st.expander("Day-wise Activation Summary", expanded=True):
             df_grouped = df_act.groupby(date_col, as_index=False)[numeric_cols].sum().sort_values(date_col)
             df_grouped = df_grouped.drop(columns=["Total_CUID"], errors="ignore").merge(df_cuid_base, on=date_col, how="left")
 
-        cols_remove = ["CreditasActivated","BankActivated","OverallActivated","MonthYear","MonthYearLabel",
+        cols_remove = ["CreditasActivated","BankActivated","Total_Activation","MonthYear","MonthYearLabel",
                        "ProductCode","ProductDesc","ReceivedDate","ActivationDate","BankActivatedDate",
                        "OverallActivatedDate","AccountOpeningDate"]
         cols_remove = [c for c in cols_remove if c != date_col]
         df_display = df_grouped.drop(columns=cols_remove, errors="ignore")
 
-        priority = [date_col, "Total_CUID"]
+        priority = [date_col, "Total_CUID", "OverallActivated"]
         df_display = df_display[priority + [c for c in df_display.columns if c not in priority]]
         df_display[date_col] = df_display[date_col].astype(str)
 
@@ -518,11 +534,11 @@ with st.expander("Day-wise Activation Summary", expanded=True):
         if view_mode == "Activation %":
             df_view = df_display.copy()
             for col in day_columns:
-                df_view[col] = (df_view[col] / df_view["Total_Activation"].replace(0, 1)) * 100
+                df_view[col] = (df_view[col] / df_view["OverallActivated"].replace(0, 1)) * 100
             df_view[day_columns] = df_view[day_columns].round(2)
             for col in day_columns:
                 df_view[col] = df_view[col].astype(str) + "%"
-            denom = raw_totals.get("Total_Activation", 1) or 1
+            denom = raw_totals.get("OverallActivated", 1) or 1
             total_row = raw_totals.copy().astype(object)
             total_row[date_col] = "Total"
             for col in day_columns:
@@ -540,7 +556,7 @@ with st.expander("Day-wise Activation Summary", expanded=True):
 # ================================================================
 # SECTION 3 : CAMPAIGN SUMMARY
 # ================================================================
-camp_path = "data/IBL_CENBL_Campaign_dec_jan_feb.csv"
+camp_path = "/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv" if os.path.exists("/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv") else "data/IBL_CENBL_Campaign_dec_jan_feb.csv"
 if os.path.exists(camp_path):
     df_camp = pd.read_csv(camp_path)
     df_camp["ScheduleDate"] = pd.to_datetime(df_camp["ScheduleDate"])
@@ -589,7 +605,7 @@ with st.expander("Campaign Summary", expanded=True):
 # ================================================================
 # SECTION 4 : PRODUCT-WISE ACTIVATION SUMMARY
 # ================================================================
-prod_csv = "data/dec-feb.csv"
+prod_csv = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
 if os.path.exists(prod_csv):
     df_prod = pd.read_csv(prod_csv)
     df_prod["AccountOpeningDate"] = pd.to_datetime(df_prod["AccountOpeningDate"])
@@ -621,9 +637,9 @@ with st.expander("Product-wise Activation Summary", expanded=True):
         prod_summary = pd.DataFrame({
             "Product":            grp["ProductDesc"].first().index,
             "Total CUID":         grp["Total_CUID"].sum(),
-            "Creditas Activated": grp.apply(lambda x: x.loc[x["CreditasActivated"]==1,"Total_Activation"].sum(), include_groups=False),
-            "Bank Activated":     grp.apply(lambda x: x.loc[x["BankActivated"]==1,"Total_CUID"].sum(), include_groups=False),
-            "Overall Activated":  grp.apply(lambda x: x.loc[x["OverallActivated"]==1,"Total_CUID"].sum(), include_groups=False),
+            "Creditas Activated": grp["CreditasActivated"].sum(),
+            "Bank Activated":     grp["BankActivated"].sum(),
+            "Overall Activated":  grp["OverallActivated"].sum(),
         }).reset_index(drop=True)
 
         gc = prod_summary["Total CUID"].sum() or 1
