@@ -1,8 +1,51 @@
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import os
 import datetime
+import json
+import pymysql
+import boto3
+from dotenv import load_dotenv
+
+load_dotenv()
+
+def _get_db_connection():
+    session = boto3.session.Session(
+        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
+        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
+        region_name=os.getenv("AWS_REGION", "ap-south-1")
+    )
+    client = session.client("secretsmanager")
+    secret = json.loads(client.get_secret_value(SecretId=os.getenv("AWS_SECRET_NAME"))["SecretString"])
+    db = secret["DATABASES"]["ANALYTICS"]
+    return pymysql.connect(host=db["HOST"], database=db["NAME"], user=db["USER"], password=db["PASSWORD"], connect_timeout=5)
+
+@st.cache_data(ttl=3600)
+def load_ibl_data():
+    try:
+        conn = _get_db_connection()
+        df = pd.read_sql("SELECT * FROM Data_IBL_Dashboard_1", conn)
+        conn.close()
+        return df
+    except Exception:
+        csv_path = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
+        return pd.read_csv(csv_path)
+
+@st.cache_data(ttl=3600)
+def load_campaign_data():
+    try:
+        conn = _get_db_connection()
+        df = pd.read_sql("SELECT * FROM Data_IBL_Dashboard_3", conn)
+        conn.close()
+        return df
+    except Exception:
+        camp_path = "/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv" if os.path.exists("/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv") else "data/IBL_CENBL_Campaign_dec_jan_feb.csv"
+        return pd.read_csv(camp_path)
+
+df_ibl = load_ibl_data()
+df_camp_raw = load_campaign_data()
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -344,8 +387,7 @@ TABLE_HEADER_STYLE = [
 # ================================================================
 # SECTION 1 : MONTHLY ACTIVATION SUMMARY
 # ================================================================
-_s1_csv = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
-_df_s1  = pd.read_csv(_s1_csv)
+_df_s1 = df_ibl.copy()
 
 import datetime as _dt
 def _fmt(m):
@@ -415,11 +457,9 @@ with st.expander("Monthly Activation Summary", expanded=True):
 # ================================================================
 # SECTION 2 : DAY-WISE ACTIVATION SUMMARY
 # ================================================================
-csv_path = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
-
 # --- load & preprocess outside expander ---
-if os.path.exists(csv_path):
-    df_external = pd.read_csv(csv_path)
+if True:
+    df_external = df_ibl.copy()
     df_external["AccountOpeningDate"] = pd.to_datetime(df_external["AccountOpeningDate"]).dt.date
     df_external["ReceivedDate"]       = pd.to_datetime(df_external["ReceivedDate"]).dt.date
     mask = df_external["ReceivedDate"] < df_external["AccountOpeningDate"]
@@ -433,8 +473,8 @@ if os.path.exists(csv_path):
     df_external["MonthYearLabel"] = df_external["MonthYear"].apply(fmt_month)
 
 with st.expander("Day-wise Activation Summary", expanded=True):
-    if not os.path.exists(csv_path):
-        st.error(f"Data file not found: `{csv_path}`")
+    if df_external.empty:
+        st.error("No data available.")
     else:
         fa, fb = st.columns([1, 2])
         with fa:
@@ -556,9 +596,8 @@ with st.expander("Day-wise Activation Summary", expanded=True):
 # ================================================================
 # SECTION 3 : CAMPAIGN SUMMARY
 # ================================================================
-camp_path = "/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv" if os.path.exists("/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv") else "data/IBL_CENBL_Campaign_dec_jan_feb.csv"
-if os.path.exists(camp_path):
-    df_camp = pd.read_csv(camp_path)
+if True:
+    df_camp = df_camp_raw.copy()
     df_camp["ScheduleDate"] = pd.to_datetime(df_camp["ScheduleDate"])
     df_camp["_MonthNum"]   = df_camp["ScheduleDate"].dt.strftime("%Y%m").astype(int)
     df_camp["_MonthLabel"] = df_camp["ScheduleDate"].dt.strftime("%b'%y")
@@ -569,8 +608,8 @@ if os.path.exists(camp_path):
     cm_latest = cm_rev.get(df_camp["_MonthNum"].max())
 
 with st.expander("Campaign Summary", expanded=True):
-    if not os.path.exists(camp_path):
-        st.error(f"Campaign file not found: `{camp_path}`")
+    if df_camp.empty:
+        st.error("No campaign data available.")
     else:
         st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
         camp_sel = st.pills("camp_month", cm_sorted,
@@ -605,9 +644,8 @@ with st.expander("Campaign Summary", expanded=True):
 # ================================================================
 # SECTION 4 : PRODUCT-WISE ACTIVATION SUMMARY
 # ================================================================
-prod_csv = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
-if os.path.exists(prod_csv):
-    df_prod = pd.read_csv(prod_csv)
+if True:
+    df_prod = df_ibl.copy()
     df_prod["AccountOpeningDate"] = pd.to_datetime(df_prod["AccountOpeningDate"])
     df_prod["ReceivedDate"]       = pd.to_datetime(df_prod["ReceivedDate"])
     mp = df_prod["ReceivedDate"] < df_prod["AccountOpeningDate"]
@@ -620,8 +658,8 @@ if os.path.exists(prod_csv):
     pm_latest = pm_rev.get(df_prod["MonthYear"].max())
 
 with st.expander("Product-wise Activation Summary", expanded=True):
-    if not os.path.exists(prod_csv):
-        st.error(f"File not found: `{prod_csv}`")
+    if df_prod.empty:
+        st.error("No data available.")
     else:
         st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
         prod_sel = st.pills("prod_month", pm_labels,
