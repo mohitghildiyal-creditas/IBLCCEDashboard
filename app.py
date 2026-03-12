@@ -1,51 +1,77 @@
-
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import os
 import datetime
-import json
-import pymysql
 import boto3
-from dotenv import load_dotenv
+import traceback
+import json
+import numpy as np
+import pymysql
+import pymysql as sql
+from datetime import date, timedelta
 
-load_dotenv()
 
-def _get_db_connection():
-    session = boto3.session.Session(
-        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
-        region_name=os.getenv("AWS_REGION", "ap-south-1")
-    )
-    client = session.client("secretsmanager")
-    secret = json.loads(client.get_secret_value(SecretId=os.getenv("AWS_SECRET_NAME"))["SecretString"])
-    db = secret["DATABASES"]["ANALYTICS"]
-    return pymysql.connect(host=db["HOST"], database=db["NAME"], user=db["USER"], password=db["PASSWORD"], connect_timeout=5)
+# =========================
+# AWS SECRET FETCH
+# =========================
 
-@st.cache_data(ttl=3600)
-def load_ibl_data():
+def fetch_secret(secret_name, region_name='ap-south-1'):
     try:
-        conn = _get_db_connection()
-        df = pd.read_sql("SELECT * FROM Data_IBL_Dashboard_1", conn)
-        conn.close()
-        return df
-    except Exception:
-        csv_path = "/home/bhaskar/Downloads/dec-feb.csv" if os.path.exists("/home/bhaskar/Downloads/dec-feb.csv") else "data/dec-feb.csv"
-        return pd.read_csv(csv_path)
+        client = boto3.client("secretsmanager", region_name=region_name)
+        response = client.get_secret_value(SecretId=secret_name)
+        return response["SecretString"]
 
-@st.cache_data(ttl=3600)
-def load_campaign_data():
-    try:
-        conn = _get_db_connection()
-        df = pd.read_sql("SELECT * FROM Data_IBL_Dashboard_3", conn)
-        conn.close()
-        return df
-    except Exception:
-        camp_path = "/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv" if os.path.exists("/home/bhaskar/Downloads/IBL_CENBL_Campaign_dec_jan_feb.csv") else "data/IBL_CENBL_Campaign_dec_jan_feb.csv"
-        return pd.read_csv(camp_path)
+    except Exception as e:
+        st.error(f"AWS Secrets Error: {str(e)}")
+        st.code(traceback.format_exc())
+        return None
 
-df_ibl = load_ibl_data()
-df_camp_raw = load_campaign_data()
+
+# =========================
+# LOAD SECRET
+# =========================
+
+secret_name = "prod/data-analytics/infra"
+
+secret_data = fetch_secret(secret_name)
+
+if secret_data is None:
+    raise Exception("Failed to fetch secret from AWS Secrets Manager")
+
+secret_data = json.loads(secret_data)
+
+
+# =========================
+# DATABASE CONNECTION
+# =========================
+
+db_connection = sql.connect(
+    host=secret_data["DATABASES"]["ANALYTICS"]["HOST"],
+    database=secret_data["DATABASES"]["ANALYTICS"]["NAME"],
+    user=secret_data["DATABASES"]["ANALYTICS"]["USER"],
+    password=secret_data["DATABASES"]["ANALYTICS"]["PASSWORD"]
+)
+
+db_cursor = db_connection.cursor()
+
+
+# =========================
+# DATA FETCH HELPER
+# =========================
+
+def get_data(query):
+    db_cursor.execute(query)
+    field_names = [i[0] for i in db_cursor.description]
+    table_rows = db_cursor.fetchall()
+    df = pd.DataFrame(table_rows, columns=field_names)
+    return df
+
+
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
 
 # ================= PAGE CONFIG =================
 st.set_page_config(
@@ -54,11 +80,12 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ================= DESIGN TOKENS (McKinsey × UIEngine) =================
-C_NAVY      = "#051C2C"   # McKinsey deep navy
-C_BLUE      = "#0065BD"   # McKinsey primary blue
-C_SKY       = "#00A3E0"   # UIEngine sky accent
-C_BG        = "#F4F6F9"   # UIEngine page background
+
+# ================= DESIGN TOKENS =================
+C_NAVY      = "#051C2C"
+C_BLUE      = "#0065BD"
+C_SKY       = "#00A3E0"
+C_BG        = "#F4F6F9"
 C_SURFACE   = "#FFFFFF"
 C_BORDER    = "#DDE1E7"
 C_TEXT      = "#1A1A2E"
@@ -66,6 +93,7 @@ C_MUTED     = "#6B7280"
 C_GREEN     = "#00875A"
 C_AMBER     = "#F59E0B"
 C_RED       = "#DC2626"
+
 
 # ================= GLOBAL CSS =================
 st.markdown(f"""
@@ -95,6 +123,7 @@ html, body, [class*="css"] {{
     align-items: center;
     justify-content: space-between;
 }}
+
 .dash-header h1 {{
     color: white;
     font-size: 20px;
@@ -102,6 +131,7 @@ html, body, [class*="css"] {{
     margin: 0;
     letter-spacing: 0.3px;
 }}
+
 .dash-header .sub {{
     color: rgba(255,255,255,0.55);
     font-size: 12px;
@@ -109,6 +139,7 @@ html, body, [class*="css"] {{
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }}
+
 .dash-header .user-badge {{
     background: rgba(255,255,255,0.12);
     color: white;
@@ -119,145 +150,22 @@ html, body, [class*="css"] {{
     cursor: pointer;
 }}
 
-/* ---- SECTION DIVIDER ---- */
-.section-block {{
-    background: {C_SURFACE};
-    border: 1px solid {C_BORDER};
-    border-radius: 4px;
-    padding: 24px 28px;
-    margin-bottom: 20px;
+#MainMenu, footer, header {{
+    visibility: hidden;
 }}
-
-/* ---- SECTION TITLE ---- */
-.section-title {{
-    font-size: 13px;
-    font-weight: 700;
-    color: {C_NAVY};
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid {C_BLUE};
-    margin-bottom: 18px;
-    display: inline-block;
-}}
-
-/* ---- FILTER LABEL ---- */
-.filter-label {{
-    font-size: 11px;
-    font-weight: 600;
-    color: {C_MUTED};
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 6px;
-}}
-
-/* ---- KPI CARD ---- */
-.kpi-card {{
-    background: {C_SURFACE};
-    border: 1px solid {C_BORDER};
-    border-top: 3px solid {C_BLUE};
-    border-radius: 4px;
-    padding: 18px 20px;
-    text-align: left;
-}}
-.kpi-label {{
-    font-size: 11px;
-    font-weight: 600;
-    color: {C_MUTED};
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 6px;
-}}
-.kpi-value {{
-    font-size: 28px;
-    font-weight: 800;
-    color: {C_NAVY};
-    line-height: 1;
-}}
-.kpi-sub {{
-    font-size: 12px;
-    color: {C_MUTED};
-    margin-top: 4px;
-}}
-
-/* ---- LOGIN PAGE ---- */
-.login-page-bg {{
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(135deg, {C_NAVY} 0%, #0a2d4a 50%, #0d3a5c 100%);
-    z-index: -1;
-}}
-.login-card {{
-    background: {C_SURFACE};
-    border-radius: 6px;
-    padding: 52px 48px 44px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.35), 0 4px 16px rgba(0,0,0,0.15);
-}}
-.login-brand {{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 32px;
-}}
-.login-brand-dot {{
-    width: 10px;
-    height: 10px;
-    background: {C_SKY};
-    border-radius: 50%;
-}}
-.login-brand-name {{
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: {C_MUTED};
-    text-transform: uppercase;
-}}
-.login-title {{
-    font-size: 26px;
-    font-weight: 800;
-    color: {C_NAVY};
-    margin-bottom: 6px;
-    line-height: 1.2;
-}}
-.login-sub {{
-    font-size: 13px;
-    color: {C_MUTED};
-    margin-bottom: 32px;
-    line-height: 1.5;
-}}
-.login-divider {{
-    height: 1px;
-    background: {C_BORDER};
-    margin: 28px 0;
-}}
-.login-footer {{
-    font-size: 11px;
-    color: {C_MUTED};
-    text-align: center;
-    margin-top: 20px;
-    letter-spacing: 0.3px;
-}}
-
-div[data-testid="stDataFrame"] {{
-    border: 1px solid {C_BORDER};
-    border-radius: 4px;
-    overflow: hidden;
-}}
-
-/* hide streamlit branding */
-#MainMenu, footer, header {{ visibility: hidden; }}
 </style>
 """, unsafe_allow_html=True)
-
 
 # ================================================================
 # AUTH
 # ================================================================
+
 USERS = {
+    "admin":"admin",
     "admin":           "admin@7860",
     "Sweta_Ganguly":   "ibl_cce@123",
     "Prithwish_Ray":   "ibl_cce@123",
-    "Urvish_Bhimani":  "ibl_cce@123"
+    "Urvish_Bhimani": "ibl_cce@123"
 }
 
 if "authenticated" not in st.session_state:
@@ -265,34 +173,18 @@ if "authenticated" not in st.session_state:
 if "username" not in st.session_state:
     st.session_state.username = ""
 
+
 def login_page():
-    # Full-page dark background
-    st.markdown(f"""
-    <style>
-    .stApp {{ background: linear-gradient(135deg, {C_NAVY} 0%, #0a2d4a 50%, #0d3a5c 100%) !important; }}
-    .block-container {{ padding-top: 0 !important; }}
-    </style>
-    """, unsafe_allow_html=True)
 
     st.markdown("<div style='height:80px'></div>", unsafe_allow_html=True)
 
     col = st.columns([1, 1.1, 1])[1]
     with col:
-        st.markdown(f"""
-        <div class="login-card">
-            <div class="login-brand">
-                <div class="login-brand-dot"></div>
-                <div class="login-brand-name">IndusInd Bank &nbsp;·&nbsp; Creditas</div>
-            </div>
-            <div class="login-title">Welcome back</div>
-            <div class="login-sub">Sign in to access the Credit Card<br>Activation Analytics Dashboard</div>
-        </div>
-        """, unsafe_allow_html=True)
 
         with st.form("login_form"):
-            username = st.text_input("Username", placeholder="Enter your username")
-            password = st.text_input("Password", type="password", placeholder="Enter your password")
-            submitted = st.form_submit_button("Sign In →", use_container_width=True, type="primary")
+            username = st.text_input("Username")
+            password = st.text_input("Password", type="password")
+            submitted = st.form_submit_button("Sign In", use_container_width=True)
 
             if submitted:
                 if username in USERS and USERS[username] == password:
@@ -302,16 +194,12 @@ def login_page():
                 else:
                     st.error("Invalid username or password.")
 
-        st.markdown(f"""
-        <div class="login-footer">
-            © {datetime.date.today().year} IndusInd Bank · Confidential
-        </div>
-        """, unsafe_allow_html=True)
-
 
 if not st.session_state.authenticated:
     login_page()
     st.stop()
+
+
 
 
 # ================================================================
@@ -319,38 +207,50 @@ if not st.session_state.authenticated:
 # ================================================================
 st.markdown(f"""
 <div class="dash-header">
-  <div>
-    <div style="display:flex;align-items:center;gap:14px;">
-      <div style="background:{C_BLUE};color:white;font-size:11px;font-weight:700;
-                  letter-spacing:1px;padding:6px 10px;border-radius:2px;">IBL BANK</div>
-      <div>
-        <div class="dash-header" style="background:transparent;padding:0;margin:0;">
-          <h1 style="color:white;font-size:18px;font-weight:700;margin:0;">
-            Credit Card Activation Dashboard
-          </h1>
-        </div>
-        <div class="sub">Performance Analytics & Monitoring</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <div style="color:rgba(255,255,255,0.55);font-size:12px;">
-      {datetime.date.today().strftime("%d %b %Y")}
-    </div>
-    <div class="user-badge">&#9679; {st.session_state.username.upper()}</div>
-  </div>
+
+<div>
+<div style="display:flex;align-items:center;gap:14px;">
+
+<div style="background:{C_BLUE};color:white;font-size:11px;font-weight:700;
+letter-spacing:1px;padding:6px 10px;border-radius:2px;">
+IBL BANK
+</div>
+
+<div>
+<div class="dash-header" style="background:transparent;padding:0;margin:0;">
+<h1 style="color:white;font-size:18px;font-weight:700;margin:0;">
+Credit Card Activation Dashboard
+</h1>
+</div>
+
+<div class="sub">Performance Analytics & Monitoring</div>
+
+</div>
+</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:12px;">
+<div style="color:rgba(255,255,255,0.55);font-size:12px;">
+{datetime.date.today().strftime("%d %b %Y")}
+</div>
+
+<div class="user-badge">&#9679; {st.session_state.username.upper()}</div>
+
+</div>
+
 </div>
 """, unsafe_allow_html=True)
+
 
 # Logout button
 with st.sidebar:
     st.markdown(f"### Signed in as **{st.session_state.username}**")
+
     if st.button("Sign Out", use_container_width=True):
         st.session_state.authenticated = False
         st.rerun()
 
 st.markdown("<div style='height:24px'></div>", unsafe_allow_html=True)
-
 
 # ================================================================
 # HELPER: chart layout defaults
@@ -360,366 +260,774 @@ CHART_LAYOUT = dict(
     plot_bgcolor=C_SURFACE,
     paper_bgcolor=C_SURFACE,
     font=dict(family="Inter, sans-serif", color=C_TEXT, size=12),
-    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1,
-                font=dict(size=11)),
-    margin=dict(l=0, r=10, t=10, b=10),
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.02,
+        xanchor="right",
+        x=1,
+        font=dict(size=11),
+    ),
+    margin=dict(l=0, r=0, t=10, b=10),
 )
 
 TABLE_HEADER_STYLE = [
-    {"selector": "th", "props": [
-        ("background-color", C_NAVY), ("color", "white"),
-        ("font-weight", "700"), ("text-align", "center"),
-        ("padding", "10px 14px"), ("font-size", "12px"),
-        ("letter-spacing", "0.5px"), ("text-transform", "uppercase"),
-    ]},
-    {"selector": "td", "props": [
-        ("padding", "9px 14px"), ("border-bottom", f"1px solid {C_BORDER}"),
-        ("font-size", "13px"),
-    ]},
-    {"selector": "tr:last-child td", "props": [
-        ("background-color", "#EEF3FB"), ("font-weight", "700"),
-    ]},
-    {"selector": "tr:hover td", "props": [
-        ("background-color", "#F0F7FF"),
-    ]},
+    {
+        "selector": "th",
+        "props": [
+            ("background-color", C_NAVY),
+            ("color", "white"),
+            ("font-weight", "700"),
+            ("text-align", "center"),
+            ("padding", "10px 14px"),
+            ("font-size", "12px"),
+            ("letter-spacing", "0.5px"),
+            ("text-transform", "uppercase"),
+        ],
+    },
+    {
+        "selector": "td",
+        "props": [
+            ("padding", "9px 14px"),
+            ("border-bottom", f"1px solid {C_BORDER}"),
+            ("font-size", "13px"),
+        ],
+    },
+    {
+        "selector": "tr:last-child td",
+        "props": [
+            ("background-color", "#EEF3FB"),
+            ("font-weight", "700"),
+        ],
+    },
+    {
+        "selector": "tr:hover td",
+        "props": [
+            ("background-color", "#F0F7FF"),
+        ],
+    },
 ]
-
 
 # ================================================================
 # SECTION 1 : MONTHLY ACTIVATION SUMMARY
 # ================================================================
-_df_s1 = df_ibl.copy()
-
-import datetime as _dt
-def _fmt(m):
-    try:
-        return _dt.datetime.strptime(str(int(m)), "%Y%m").strftime("%b'%y")
-    except:
-        return str(m)
-
-_grp = _df_s1.groupby("MonthYear", as_index=False).agg(
-    Sourced=("Total_CUID", "sum"),
-    Activated=("OverallActivated", "sum")
-).sort_values("MonthYear")
-_grp["Month"] = _grp["MonthYear"].apply(_fmt)
-
 with st.expander("Monthly Activation Summary", expanded=True):
-    data = {
-        "Month":     _grp["Month"].tolist(),
-        "Sourced":   _grp["Sourced"].tolist(),
-        "Activated": _grp["Activated"].tolist(),
-    }
-    df_summary = pd.DataFrame(data)
-    df_summary["Activated %"] = round((df_summary["Activated"] / df_summary["Sourced"]) * 100, 2)
 
-    col1, col2 = st.columns([1, 1.7])
+    data = {
+        "Month": ["Jul'25", "Aug'25", "Sep'25", "Nov'25", "Dec'25"],
+        "Sourced": [65622, 60691, 45932, 45257, 33801],
+        "Activated": [59243, 55731, 37846, 41670, 30805],
+    }
+
+    df_summary = pd.DataFrame(data)
+    df_summary["Activated %"] = round(
+        (df_summary["Activated"] / df_summary["Sourced"]) * 100, 2
+    )
+
+    col1, col2 = st.columns([1.3, 1.5])
 
     with col1:
-        styled = df_summary.style\
-            .format({"Sourced": "{:,.0f}", "Activated": "{:,.0f}", "Activated %": "{:.2f}%"})\
-            .set_properties(**{"text-align": "center", "font-size": "13px"})\
-            .set_table_styles(TABLE_HEADER_STYLE)\
+
+        styled = (
+            df_summary.style.format(
+                {
+                    "Sourced": "{:,.0f}",
+                    "Activated": "{:,.0f}",
+                    "Activated %": "{:.2f}%",
+                }
+            )
+            .set_properties(**{"text-align": "center", "font-size": "13px"})
+            .set_table_styles(TABLE_HEADER_STYLE)
             .hide(axis="index")
-        st.dataframe(styled, width="stretch", hide_index=True, height=230)
+        )
+
+        st.dataframe(styled, use_container_width=True, hide_index=True, height=230)
 
     with col2:
-        fig = go.Figure()
-        fig.add_trace(go.Bar(
-            x=df_summary["Month"], y=df_summary["Sourced"], name="Sourced",
-            marker_color=C_NAVY, marker_line_width=0,
-            text=df_summary["Sourced"].apply(lambda x: f"{x:,.0f}"),
-            textposition="outside", textfont=dict(size=10, color=C_NAVY),
-        ))
-        fig.add_trace(go.Bar(
-            x=df_summary["Month"], y=df_summary["Activated"], name="Activated",
-            marker_color=C_BLUE, marker_line_width=0,
-            text=df_summary["Activated"].apply(lambda x: f"{x:,.0f}"),
-            textposition="outside", textfont=dict(size=10, color=C_BLUE),
-        ))
-        fig.add_trace(go.Scatter(
-            x=df_summary["Month"], y=df_summary["Activated %"],
-            name="Activation %", mode="lines+markers+text", yaxis="y2",
-            line=dict(color=C_SKY, width=2.5),
-            marker=dict(size=7, color=C_SKY),
-            text=df_summary["Activated %"].apply(lambda x: f"{x}%"),
-            textposition="top center", textfont=dict(size=10, color=C_SKY),
-        ))
-        fig.update_layout(
-            barmode="group", height=300,
-            yaxis=dict(title="Volume", title_font=dict(size=11), tickfont=dict(size=10), gridcolor="#F0F0F0"),
-            yaxis2=dict(title="Activation %", overlaying="y", side="right",
-                        range=[80, 100], ticksuffix="%", title_font=dict(size=11), tickfont=dict(size=10)),
-            **CHART_LAYOUT
-        )
-        st.plotly_chart(fig, width="stretch")
-    st.caption("*Data Source: IBL Bank*")
 
+        fig = go.Figure()
+
+        fig.add_trace(
+            go.Bar(
+                x=df_summary["Month"],
+                y=df_summary["Sourced"],
+                name="Sourced",
+                marker_color=C_NAVY,
+                marker_line_width=0,
+                text=df_summary["Sourced"].apply(lambda x: f"{x:,.0f}"),
+                textposition="outside",
+                textfont=dict(size=10, color=C_NAVY),
+            )
+        )
+
+        fig.add_trace(
+            go.Bar(
+                x=df_summary["Month"],
+                y=df_summary["Activated"],
+                name="Activated",
+                marker_color=C_BLUE,
+                marker_line_width=0,
+                text=df_summary["Activated"].apply(lambda x: f"{x:,.0f}"),
+                textposition="outside",
+                textfont=dict(size=10, color=C_BLUE),
+            )
+        )
+
+        fig.add_trace(
+            go.Scatter(
+                x=df_summary["Month"],
+                y=df_summary["Activated %"],
+                name="Activation %",
+                mode="lines+markers+text",
+                yaxis="y2",
+                line=dict(color=C_SKY, width=2.5),
+                marker=dict(size=7, color=C_SKY),
+                text=df_summary["Activated %"].apply(lambda x: f"{x}%"),
+                textposition="top center",
+                textfont=dict(size=10, color=C_SKY),
+            )
+        )
+
+        fig.update_layout(
+            barmode="group",
+            height=300,
+            yaxis=dict(
+                title="Volume",
+                title_font=dict(size=11),
+                tickfont=dict(size=10),
+                gridcolor="#F0F0F0",
+            ),
+            yaxis2=dict(
+                title="Activation %",
+                overlaying="y",
+                side="right",
+                range=[80, 100],
+                ticksuffix="%",
+                title_font=dict(size=11),
+                tickfont=dict(size=10),
+            ),
+            **CHART_LAYOUT,
+        )
+
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.caption("*Data Source: IBL Bank*")
 
 # ================================================================
 # SECTION 2 : DAY-WISE ACTIVATION SUMMARY
 # ================================================================
-# --- load & preprocess outside expander ---
-if True:
-    df_external = df_ibl.copy()
-    df_external["AccountOpeningDate"] = pd.to_datetime(df_external["AccountOpeningDate"]).dt.date
-    df_external["ReceivedDate"]       = pd.to_datetime(df_external["ReceivedDate"]).dt.date
-    mask = df_external["ReceivedDate"] < df_external["AccountOpeningDate"]
-    df_external.loc[mask, "ReceivedDate"] = df_external.loc[mask, "AccountOpeningDate"]
+df_external = get_data(
+    """
+SELECT * FROM Data_IBL_Dashboard_1
+"""
+)
 
-    def fmt_month(m):
-        try:
-            return datetime.datetime.strptime(str(int(m)), "%Y%m").strftime("%b'%y")
-        except:
-            return str(m)
-    df_external["MonthYearLabel"] = df_external["MonthYear"].apply(fmt_month)
+df_external["AccountOpeningDate"] = pd.to_datetime(
+    df_external["AccountOpeningDate"]
+).dt.date
+df_external["ReceivedDate"] = pd.to_datetime(df_external["ReceivedDate"]).dt.date
+
+mask = df_external["ReceivedDate"] < df_external["AccountOpeningDate"]
+df_external.loc[mask, "ReceivedDate"] = df_external.loc[
+    mask, "AccountOpeningDate"
+]
+
+
+def fmt_month(m):
+    try:
+        return datetime.datetime.strptime(str(int(m)), "%Y%m").strftime("%b'%y")
+    except:
+        return str(m)
+
+
+df_external["MonthYearLabel"] = df_external["MonthYear"].apply(fmt_month)
 
 with st.expander("Day-wise Activation Summary", expanded=True):
-    if df_external.empty:
-        st.error("No data available.")
+
+    fa, fb = st.columns([0.8, 3.2])
+
+    with fa:
+
+        desc_options = ["All"] + sorted(
+            df_external["ProductDesc"].dropna().unique().tolist()
+        )
+
+        product_filter = st.selectbox(
+            "Product",
+            options=desc_options,
+            index=0,
+            key="product_select",
+        )
+
+    with fb:
+
+        st.markdown(
+            '<div class="filter-label">Month Year</div>',
+            unsafe_allow_html=True,
+        )
+
+        month_label_map = dict(
+            zip(df_external["MonthYearLabel"], df_external["MonthYear"])
+        )
+
+        month_num_to_label = {v: k for k, v in month_label_map.items()}
+
+        _my_order = (
+            df_external[["MonthYearLabel", "MonthYear"]]
+            .drop_duplicates()
+            .dropna()
+            .sort_values("MonthYear")
+        )
+
+        month_labels_sorted = _my_order["MonthYearLabel"].tolist()
+
+        latest_month_label = month_num_to_label.get(
+            df_external["MonthYear"].max()
+        )
+
+        month_filter_labels = st.pills(
+            "month_year",
+            options=month_labels_sorted,
+            default=[latest_month_label] if latest_month_label else None,
+            selection_mode="multi",
+            label_visibility="collapsed",
+            key="month_pills",
+        )
+
+        month_filter = (
+            [month_label_map[l] for l in month_filter_labels]
+            if month_filter_labels
+            else []
+        )
+
+    df_filtered = df_external.copy()
+
+    if product_filter != "All":
+        df_filtered = df_filtered[
+            df_filtered["ProductDesc"] == product_filter
+        ]
+
+    if month_filter:
+        df_filtered = df_filtered[
+            df_filtered["MonthYear"].isin(month_filter)
+        ]
+
+    c1, c2, c3 = st.columns([2, 3, 2])
+
+    with c1:
+
+        st.markdown(
+            '<div class="filter-label">Date View</div>',
+            unsafe_allow_html=True,
+        )
+
+        date_view = st.pills(
+            "date_view",
+            ["Account Opening Date", "Received Date"],
+            default="Account Opening Date",
+            selection_mode="single",
+            label_visibility="collapsed",
+            key="date_view_pills",
+        )
+
+    with c2:
+
+        st.markdown(
+            '<div class="filter-label">Activation View</div>',
+            unsafe_allow_html=True,
+        )
+
+        activation_view = st.pills(
+            "activation_view",
+            [
+                "Overall Activated",
+                "Creditas Activated",
+                "Bank Activated",
+            ],
+            default="Overall Activated",
+            selection_mode="single",
+            label_visibility="collapsed",
+            key="act_view_pills",
+        )
+
+    with c3:
+
+        st.markdown(
+            '<div class="filter-label">Metric</div>',
+            unsafe_allow_html=True,
+        )
+
+        view_mode = st.pills(
+            "view_mode",
+            ["Count", "Activation %"],
+            default="Count",
+            selection_mode="single",
+            label_visibility="collapsed",
+            key="view_mode_pills",
+        )
+
+    if activation_view == "Creditas Activated":
+        df_act = df_filtered[
+            df_filtered["CreditasActivated"] >= 1
+        ].copy()
+
+    elif activation_view == "Bank Activated":
+        df_act = df_filtered[
+            df_filtered["BankActivated"] >= 1
+        ].copy()
+
     else:
-        fa, fb = st.columns([1, 2])
-        with fa:
-            desc_options = ["All"] + sorted(df_external["ProductDesc"].dropna().unique().tolist())
-            product_filter = st.selectbox("Product", options=desc_options, index=0, key="product_select")
+        df_act = df_filtered[
+            df_filtered["OverallActivated"] >= 1
+        ].copy()
 
-        with fb:
-            st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
-            month_label_map    = dict(zip(df_external["MonthYearLabel"], df_external["MonthYear"]))
-            month_num_to_label = {v: k for k, v in month_label_map.items()}
-            _my_order = df_external[["MonthYearLabel","MonthYear"]].drop_duplicates().dropna().sort_values("MonthYear")
-            month_labels_sorted = _my_order["MonthYearLabel"].tolist()
-            latest_month_label  = month_num_to_label.get(df_external["MonthYear"].max())
-            month_filter_labels = st.pills("month_year", options=month_labels_sorted,
-                                           default=[latest_month_label] if latest_month_label else None,
-                                           selection_mode="multi", label_visibility="collapsed", key="month_pills")
-            month_filter = [month_label_map[l] for l in month_filter_labels] if month_filter_labels else []
+    if date_view == "Received Date":
 
-        df_filtered = df_external.copy()
-        if product_filter != "All":
-            df_filtered = df_filtered[df_filtered["ProductDesc"] == product_filter]
-        if month_filter:
-            df_filtered = df_filtered[df_filtered["MonthYear"].isin(month_filter)]
-
-        c1, c2, c3 = st.columns([2, 3, 2])
-        with c1:
-            st.markdown('<div class="filter-label">Date View</div>', unsafe_allow_html=True)
-            date_view = st.pills("date_view", ["Account Opening Date", "Received Date"],
-                                 default="Account Opening Date", selection_mode="single",
-                                 label_visibility="collapsed", key="date_view_pills")
-        with c2:
-            st.markdown('<div class="filter-label">Activation View</div>', unsafe_allow_html=True)
-            activation_view = st.pills("activation_view",
-                                       ["Overall Activated", "Creditas Activated", "Bank Activated"],
-                                       default="Overall Activated", selection_mode="single",
-                                       label_visibility="collapsed", key="act_view_pills")
-        with c3:
-            st.markdown('<div class="filter-label">Metric</div>', unsafe_allow_html=True)
-            view_mode = st.pills("view_mode", ["Count", "Activation %"],
-                                 default="Count", selection_mode="single",
-                                 label_visibility="collapsed", key="view_mode_pills")
+        date_col = "ReceivedDate"
 
         if activation_view == "Creditas Activated":
-            df_act = df_filtered[df_filtered["CreditasActivated"] > 0].copy()
+            act_date_col = "ActivationDate"
+
         elif activation_view == "Bank Activated":
-            df_act = df_filtered[df_filtered["BankActivated"] > 0].copy()
+            act_date_col = "BankActivatedDate"
+
         else:
-            df_act = df_filtered[df_filtered["OverallActivated"] > 0].copy()
+            act_date_col = "OverallActivatedDate"
 
-        if date_view == "Received Date":
-            date_col = "ReceivedDate"
-            if activation_view == "Creditas Activated":
-                act_date_col = "ActivationDate"
-            elif activation_view == "Bank Activated":
-                act_date_col = "BankActivatedDate"
-            else:
-                act_date_col = "OverallActivatedDate"
+        df_rd = df_act.copy()
 
-            df_rd = df_act.copy()
-            df_rd["_rcd_dt"] = pd.to_datetime(df_rd["ReceivedDate"])
-            df_rd["_act_dt"] = pd.to_datetime(df_rd[act_date_col], errors="coerce")
-            df_rd["_day_rd"] = (df_rd["_act_dt"] - df_rd["_rcd_dt"]).dt.days.clip(lower=0).fillna(0).astype(int)
+        df_rd["_rcd_dt"] = pd.to_datetime(df_rd["ReceivedDate"])
+        df_rd["_act_dt"] = pd.to_datetime(
+            df_rd[act_date_col],
+            errors="coerce",
+        )
 
-            if len(df_rd) > 0:
-                df_pivot = df_rd.groupby(["ReceivedDate", "_day_rd"])["Total_Activation"].sum()\
-                                .unstack("_day_rd").fillna(0)
-                df_pivot.columns = [f"Day{int(c)}" for c in df_pivot.columns]
-                df_pivot = df_pivot.reset_index()
-            else:
-                df_pivot = pd.DataFrame(columns=["ReceivedDate"])
+        df_rd["_day_rd"] = (
+            (df_rd["_act_dt"] - df_rd["_rcd_dt"])
+            .dt.days.clip(lower=0)
+            .fillna(0)
+            .astype(int)
+        )
 
-            df_cuid_base = df_filtered.groupby("ReceivedDate", as_index=False)["Total_CUID"].sum()
-            df_grouped = df_pivot.merge(df_cuid_base, on="ReceivedDate", how="left").sort_values("ReceivedDate")
-            act_grp = df_act.groupby("ReceivedDate", as_index=False)["OverallActivated"].sum()
-            df_grouped = df_grouped.merge(act_grp, on="ReceivedDate", how="left")
+        if len(df_rd) > 0:
+
+            df_pivot = (
+                df_rd.groupby(["ReceivedDate", "_day_rd"])["Total_Activation"]
+                .sum()
+                .unstack("_day_rd")
+                .fillna(0)
+            )
+
+            df_pivot.columns = [f"Day{int(c)}" for c in df_pivot.columns]
+
+            df_pivot = df_pivot.reset_index()
+
         else:
-            date_col = "AccountOpeningDate"
-            df_cuid_base = df_filtered.groupby(date_col, as_index=False)["Total_CUID"].sum()
-            numeric_cols = df_act.select_dtypes(include="number").columns
-            df_grouped = df_act.groupby(date_col, as_index=False)[numeric_cols].sum().sort_values(date_col)
-            df_grouped = df_grouped.drop(columns=["Total_CUID"], errors="ignore").merge(df_cuid_base, on=date_col, how="left")
 
-        cols_remove = ["CreditasActivated","BankActivated","Total_Activation","MonthYear","MonthYearLabel",
-                       "ProductCode","ProductDesc","ReceivedDate","ActivationDate","BankActivatedDate",
-                       "OverallActivatedDate","AccountOpeningDate"]
-        cols_remove = [c for c in cols_remove if c != date_col]
-        df_display = df_grouped.drop(columns=cols_remove, errors="ignore")
+            df_pivot = pd.DataFrame(columns=["ReceivedDate"])
 
-        priority = [date_col, "Total_CUID", "OverallActivated"]
-        df_display = df_display[priority + [c for c in df_display.columns if c not in priority]]
-        df_display[date_col] = df_display[date_col].astype(str)
+        df_cuid_base = df_filtered.groupby(
+            "ReceivedDate",
+            as_index=False,
+        )["Total_CUID"].sum()
 
-        day_columns = [c for c in df_display.columns if c.startswith("Day")]
-        metric_cols = df_display.select_dtypes(include="number").columns
-        raw_totals  = df_display.head(100)[metric_cols].sum()
+        df_grouped = (
+            df_pivot.merge(
+                df_cuid_base,
+                on="ReceivedDate",
+                how="left",
+            )
+            .sort_values("ReceivedDate")
+        )
 
-        if view_mode == "Activation %":
-            df_view = df_display.copy()
-            for col in day_columns:
-                df_view[col] = (df_view[col] / df_view["OverallActivated"].replace(0, 1)) * 100
-            df_view[day_columns] = df_view[day_columns].round(2)
-            for col in day_columns:
-                df_view[col] = df_view[col].astype(str) + "%"
-            denom = raw_totals.get("OverallActivated", 1) or 1
-            total_row = raw_totals.copy().astype(object)
-            total_row[date_col] = "Total"
-            for col in day_columns:
-                total_row[col] = f"{round(raw_totals[col]/denom*100,2)}%"
-        else:
-            df_view = df_display.copy()
-            total_row = raw_totals.copy().astype(object)
-            total_row[date_col] = "Total"
+        act_grp = df_act.groupby(
+            "ReceivedDate",
+            as_index=False,
+        )["Total_Activation"].sum()
 
-        df_with_total = pd.concat([df_view.head(100), pd.DataFrame([total_row])], ignore_index=True)
-        st.dataframe(df_with_total, width="stretch", hide_index=True)
-        st.caption("*Data Source: Creditas DataBase*")
+        df_grouped = df_grouped.merge(
+            act_grp,
+            on="ReceivedDate",
+            how="left",
+        )
 
+    else:
+
+        date_col = "AccountOpeningDate"
+
+        df_cuid_base = df_filtered.groupby(
+            date_col,
+            as_index=False,
+        )["Total_CUID"].sum()
+
+        numeric_cols = df_act.select_dtypes(include="number").columns
+
+        df_grouped = (
+            df_act.groupby(date_col, as_index=False)[numeric_cols]
+            .sum()
+            .sort_values(date_col)
+        )
+
+        df_grouped = (
+            df_grouped.drop(columns=["Total_CUID"], errors="ignore")
+            .merge(df_cuid_base, on=date_col, how="left")
+        )
+
+    cols_remove = [
+        "CreditasActivated",
+        "BankActivated",
+        "OverallActivated",
+        "MonthYear",
+        "MonthYearLabel",
+        "ProductCode",
+        "ProductDesc",
+        "ReceivedDate",
+        "ActivationDate",
+        "BankActivatedDate",
+        "OverallActivatedDate",
+        "AccountOpeningDate",
+    ]
+
+    cols_remove = [c for c in cols_remove if c != date_col]
+
+    df_display = df_grouped.drop(columns=cols_remove, errors="ignore")
+
+    priority = [date_col, "Total_CUID"]
+
+    df_display = df_display[
+        priority + [c for c in df_display.columns if c not in priority]
+    ]
+
+    df_display[date_col] = df_display[date_col].astype(str)
+
+    day_columns = [c for c in df_display.columns if c.startswith("Day")]
+
+    metric_cols = df_display.select_dtypes(include="number").columns
+
+    raw_totals = df_display.head(100)[metric_cols].sum()
+
+    if view_mode == "Activation %":
+
+        df_view = df_display.copy()
+
+        for col in day_columns:
+            df_view[col] = (
+                df_view[col]
+                / df_view["Total_Activation"].replace(0, 1)
+            ) * 100
+
+        df_view[day_columns] = df_view[day_columns].round(2)
+
+        for col in day_columns:
+            df_view[col] = df_view[col].astype(str) + "%"
+
+        denom = raw_totals.get("Total_Activation", 1) or 1
+
+        total_row = raw_totals.copy().astype(object)
+        total_row[date_col] = "Total"
+
+        for col in day_columns:
+            total_row[col] = f"{round(raw_totals[col]/denom*100,2)}%"
+
+    else:
+
+        df_view = df_display.copy()
+
+        total_row = raw_totals.copy().astype(object)
+        total_row[date_col] = "Total"
+
+    df_with_total = pd.concat(
+        [df_view.head(100), pd.DataFrame([total_row])],
+        ignore_index=True,
+    )
+
+    st.dataframe(
+        df_with_total,
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    st.caption("*Data Source: Creditas DataBase*")
 
 # ================================================================
 # SECTION 3 : CAMPAIGN SUMMARY
 # ================================================================
-if True:
-    df_camp = df_camp_raw.copy()
-    df_camp["ScheduleDate"] = pd.to_datetime(df_camp["ScheduleDate"])
-    df_camp["_MonthNum"]   = df_camp["ScheduleDate"].dt.strftime("%Y%m").astype(int)
-    df_camp["_MonthLabel"] = df_camp["ScheduleDate"].dt.strftime("%b'%y")
-    cm_map    = dict(zip(df_camp["_MonthLabel"], df_camp["_MonthNum"]))
-    cm_rev    = {v: k for k, v in cm_map.items()}
-    _cm_order = df_camp[["_MonthLabel","_MonthNum"]].drop_duplicates().dropna().sort_values("_MonthNum")
-    cm_sorted = _cm_order["_MonthLabel"].tolist()
-    cm_latest = cm_rev.get(df_camp["_MonthNum"].max())
+df_camp = get_data(
+    """
+SELECT * FROM Data_IBL_Dashboard_3
+"""
+)
+
+df_camp["ScheduleDate"] = pd.to_datetime(df_camp["ScheduleDate"])
+
+df_camp["_MonthNum"] = (
+    df_camp["ScheduleDate"].dt.strftime("%Y%m").astype(int)
+)
+
+df_camp["_MonthLabel"] = df_camp["ScheduleDate"].dt.strftime("%b'%y")
+
+cm_map = dict(zip(df_camp["_MonthLabel"], df_camp["_MonthNum"]))
+cm_rev = {v: k for k, v in cm_map.items()}
+
+_cm_order = (
+    df_camp[["_MonthLabel", "_MonthNum"]]
+    .drop_duplicates()
+    .dropna()
+    .sort_values("_MonthNum")
+)
+
+cm_sorted = _cm_order["_MonthLabel"].tolist()
+cm_latest = cm_rev.get(df_camp["_MonthNum"].max())
 
 with st.expander("Campaign Summary", expanded=True):
-    if df_camp.empty:
-        st.error("No campaign data available.")
-    else:
-        st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
-        camp_sel = st.pills("camp_month", cm_sorted,
-                            default=[cm_latest] if cm_latest else None,
-                            selection_mode="multi", label_visibility="collapsed", key="camp_month_pills")
-        sel_nums = [cm_map[l] for l in camp_sel] if camp_sel else []
 
-        df_cf = df_camp.copy()
-        if sel_nums:
-            df_cf = df_cf[df_cf["_MonthNum"].isin(sel_nums)]
+    st.markdown(
+        '<div class="filter-label">Month Year</div>',
+        unsafe_allow_html=True,
+    )
 
-        df_cf = df_cf.drop(columns=[
-            "Unnamed: 0","TemplateContent","LongUrl","Category",
-            "_MonthNum","_MonthLabel",
-            "CampaignId","TemplateId","Last_5_Fail","Last_3_Fail",
-            "Click","BotClicks","NotBotClicks"
-        ], errors="ignore")
-        df_cf["ScheduleDate"] = df_cf["ScheduleDate"].dt.strftime("%d-%b-%Y")
+    camp_sel = st.pills(
+        "camp_month",
+        cm_sorted,
+        default=[cm_latest] if cm_latest else None,
+        selection_mode="multi",
+        label_visibility="collapsed",
+        key="camp_month_pills",
+    )
 
-        num_cols_c  = df_cf.select_dtypes(include="number").columns.tolist()
-        total_row_c = df_cf[num_cols_c].sum().astype(object)
-        total_row_c["Channel"] = "Total"
-        for col in df_cf.columns:
-            if col not in num_cols_c and col != "Channel":
-                total_row_c[col] = ""
+    sel_nums = [cm_map[l] for l in camp_sel] if camp_sel else []
 
-        df_camp_display = pd.concat([df_cf, pd.DataFrame([total_row_c])], ignore_index=True)
-        st.dataframe(df_camp_display, width="stretch", hide_index=True)
-        st.caption("*Data Source: Creditas Database*")
+    df_cf = df_camp.copy()
 
+    if sel_nums:
+        df_cf = df_cf[df_cf["_MonthNum"].isin(sel_nums)]
+
+    df_cf = df_cf.drop(
+        columns=[
+            "Unnamed: 0",
+            "TemplateContent",
+            "LongUrl",
+            "Category",
+            "_MonthNum",
+            "_MonthLabel",
+            "CampaignId",
+            "TemplateId",
+            "Last_5_Fail",
+            "Last_3_Fail",
+            "Click",
+            "BotClicks",
+            "NotBotClicks",
+        ],
+        errors="ignore",
+    )
+
+    df_cf["ScheduleDate"] = df_cf["ScheduleDate"].dt.strftime("%d-%b-%Y")
+
+    num_cols_c = df_cf.select_dtypes(include="number").columns.tolist()
+
+    total_row_c = df_cf[num_cols_c].sum().astype(object)
+    total_row_c["Channel"] = "Total"
+
+    for col in df_cf.columns:
+        if col not in num_cols_c and col != "Channel":
+            total_row_c[col] = ""
+
+    df_camp_display = pd.concat(
+        [df_cf, pd.DataFrame([total_row_c])],
+        ignore_index=True,
+    )
+
+    st.dataframe(
+        df_camp_display,
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    st.caption("*Data Source: Creditas Database*")
 
 # ================================================================
 # SECTION 4 : PRODUCT-WISE ACTIVATION SUMMARY
 # ================================================================
-if True:
-    df_prod = df_ibl.copy()
-    df_prod["AccountOpeningDate"] = pd.to_datetime(df_prod["AccountOpeningDate"])
-    df_prod["ReceivedDate"]       = pd.to_datetime(df_prod["ReceivedDate"])
-    mp = df_prod["ReceivedDate"] < df_prod["AccountOpeningDate"]
-    df_prod.loc[mp, "ReceivedDate"] = df_prod.loc[mp, "AccountOpeningDate"]
-    df_prod["_MonthLabel"] = df_prod["MonthYear"].apply(fmt_month)
-    pm_map    = dict(zip(df_prod["_MonthLabel"], df_prod["MonthYear"]))
-    pm_rev    = {v: k for k, v in pm_map.items()}
-    _pm_order = df_prod[["_MonthLabel","MonthYear"]].drop_duplicates().dropna().sort_values("MonthYear")
-    pm_labels = _pm_order["_MonthLabel"].tolist()
-    pm_latest = pm_rev.get(df_prod["MonthYear"].max())
+df_prod = df_external.copy()
+
+df_prod["AccountOpeningDate"] = pd.to_datetime(
+    df_prod["AccountOpeningDate"]
+)
+
+df_prod["ReceivedDate"] = pd.to_datetime(df_prod["ReceivedDate"])
+
+mp = df_prod["ReceivedDate"] < df_prod["AccountOpeningDate"]
+
+df_prod.loc[mp, "ReceivedDate"] = df_prod.loc[
+    mp,
+    "AccountOpeningDate",
+]
+
+df_prod["_MonthLabel"] = df_prod["MonthYear"].apply(fmt_month)
+
+pm_map = dict(zip(df_prod["_MonthLabel"], df_prod["MonthYear"]))
+pm_rev = {v: k for k, v in pm_map.items()}
+
+_pm_order = (
+    df_prod[["_MonthLabel", "MonthYear"]]
+    .drop_duplicates()
+    .dropna()
+    .sort_values("MonthYear")
+)
+
+pm_labels = _pm_order["_MonthLabel"].tolist()
+pm_latest = pm_rev.get(df_prod["MonthYear"].max())
 
 with st.expander("Product-wise Activation Summary", expanded=True):
-    if df_prod.empty:
-        st.error("No data available.")
-    else:
-        st.markdown('<div class="filter-label">Month Year</div>', unsafe_allow_html=True)
-        prod_sel = st.pills("prod_month", pm_labels,
-                            default=[pm_latest] if pm_latest else None,
-                            selection_mode="multi", label_visibility="collapsed", key="prod_month_pills")
-        pm_nums = [pm_map[l] for l in prod_sel] if prod_sel else []
 
-        df_pf = df_prod.copy()
-        if pm_nums:
-            df_pf = df_pf[df_pf["MonthYear"].isin(pm_nums)]
+    st.markdown(
+        '<div class="filter-label">Month Year</div>',
+        unsafe_allow_html=True,
+    )
 
-        grp = df_pf.groupby("ProductDesc")
-        prod_summary = pd.DataFrame({
-            "Product":            grp["ProductDesc"].first().index,
-            "Total CUID":         grp["Total_CUID"].sum(),
-            "Creditas Activated": grp["CreditasActivated"].sum(),
-            "Bank Activated":     grp["BankActivated"].sum(),
-            "Overall Activated":  grp["OverallActivated"].sum(),
-        }).reset_index(drop=True)
+    prod_sel = st.pills(
+        "prod_month",
+        pm_labels,
+        default=[pm_latest] if pm_latest else None,
+        selection_mode="multi",
+        label_visibility="collapsed",
+        key="prod_month_pills",
+    )
 
-        gc = prod_summary["Total CUID"].sum() or 1
-        prod_summary["Allocation %"]          = (prod_summary["Total CUID"]         / gc * 100).round(2)
-        prod_summary["Creditas Activation %"] = (prod_summary["Creditas Activated"] / prod_summary["Total CUID"].replace(0,1) * 100).round(2)
-        prod_summary["Bank Activation %"]     = (prod_summary["Bank Activated"]     / prod_summary["Total CUID"].replace(0,1) * 100).round(2)
-        prod_summary["Overall Activation %"]  = (prod_summary["Overall Activated"]  / prod_summary["Total CUID"].replace(0,1) * 100).round(2)
+    pm_nums = [pm_map[l] for l in prod_sel] if prod_sel else []
 
-        display_cols = ["Product","Total CUID","Allocation %",
-                        "Creditas Activated","Creditas Activation %",
-                        "Bank Activated","Bank Activation %",
-                        "Overall Activated","Overall Activation %"]
-        prod_summary = prod_summary[display_cols].sort_values("Total CUID", ascending=False)
+    df_pf = df_prod.copy()
 
-        total_p = prod_summary.select_dtypes(include="number").sum().astype(object)
-        total_p["Product"]               = "Total"
-        total_p["Allocation %"]          = 100.0
-        total_p["Creditas Activation %"] = round(prod_summary["Creditas Activated"].sum() / gc * 100, 2)
-        total_p["Bank Activation %"]     = round(prod_summary["Bank Activated"].sum()     / gc * 100, 2)
-        total_p["Overall Activation %"]  = round(prod_summary["Overall Activated"].sum()  / gc * 100, 2)
+    if pm_nums:
+        df_pf = df_pf[df_pf["MonthYear"].isin(pm_nums)]
 
-        df_prod_display = pd.concat([prod_summary, pd.DataFrame([total_p])], ignore_index=True)
+    prod_summary = (
+        df_pf.groupby("ProductDesc")
+        .agg(
+            Product=("ProductDesc", "first"),
+            Total_CUID=("Total_CUID", "sum"),
+            Creditas_Activated=(
+                "CreditasActivated",
+                lambda x: x[x >= 1].sum(),
+            ),
+            Bank_Activated=(
+                "BankActivated",
+                lambda x: x[x >= 1].sum(),
+            ),
+            Overall_Activated=(
+                "OverallActivated",
+                lambda x: x[x >= 1].sum(),
+            ),
+        )
+        .reset_index(drop=True)
+    )
 
-        styled_prod = df_prod_display.style\
-            .format({
+    prod_summary = prod_summary.rename(
+        columns={
+            "Total_CUID": "Total CUID",
+            "Creditas_Activated": "Creditas Activated",
+            "Bank_Activated": "Bank Activated",
+            "Overall_Activated": "Overall Activated",
+        }
+    )
+
+    gc = prod_summary["Total CUID"].sum() or 1
+
+    prod_summary["Allocation %"] = (
+        prod_summary["Total CUID"] / gc * 100
+    ).round(2)
+
+    prod_summary["Creditas Activation %"] = (
+        prod_summary["Creditas Activated"]
+        / prod_summary["Total CUID"].replace(0, 1)
+        * 100
+    ).round(2)
+
+    prod_summary["Bank Activation %"] = (
+        prod_summary["Bank Activated"]
+        / prod_summary["Total CUID"].replace(0, 1)
+        * 100
+    ).round(2)
+
+    prod_summary["Overall Activation %"] = (
+        prod_summary["Overall Activated"]
+        / prod_summary["Total CUID"].replace(0, 1)
+        * 100
+    ).round(2)
+
+    display_cols = [
+        "Product",
+        "Total CUID",
+        "Allocation %",
+        "Creditas Activated",
+        "Creditas Activation %",
+        "Bank Activated",
+        "Bank Activation %",
+        "Overall Activated",
+        "Overall Activation %",
+    ]
+
+    prod_summary = prod_summary[display_cols].sort_values(
+        "Total CUID",
+        ascending=False,
+    )
+
+    total_p = prod_summary.select_dtypes(include="number").sum().astype(
+        object
+    )
+
+    total_p["Product"] = "Total"
+    total_p["Allocation %"] = 100.0
+
+    total_p["Creditas Activation %"] = round(
+        prod_summary["Creditas Activated"].sum() / gc * 100,
+        2,
+    )
+
+    total_p["Bank Activation %"] = round(
+        prod_summary["Bank Activated"].sum() / gc * 100,
+        2,
+    )
+
+    total_p["Overall Activation %"] = round(
+        prod_summary["Overall Activated"].sum() / gc * 100,
+        2,
+    )
+
+    df_prod_display = pd.concat(
+        [prod_summary, pd.DataFrame([total_p])],
+        ignore_index=True,
+    )
+
+    styled_prod = (
+        df_prod_display.style.format(
+            {
                 "Total CUID": "{:,.0f}",
                 "Allocation %": "{:.2f}%",
-                "Creditas Activated": "{:,.0f}", "Creditas Activation %": "{:.2f}%",
-                "Bank Activated": "{:,.0f}",     "Bank Activation %": "{:.2f}%",
-                "Overall Activated": "{:,.0f}",  "Overall Activation %": "{:.2f}%",
-            }, na_rep="")\
-            .set_table_styles(TABLE_HEADER_STYLE)\
-            .hide(axis="index")
+                "Creditas Activated": "{:,.0f}",
+                "Creditas Activation %": "{:.2f}%",
+                "Bank Activated": "{:,.0f}",
+                "Bank Activation %": "{:.2f}%",
+                "Overall Activated": "{:,.0f}",
+                "Overall Activation %": "{:.2f}%",
+            },
+            na_rep="",
+        )
+        .set_table_styles(TABLE_HEADER_STYLE)
+        .hide(axis="index")
+    )
 
-        st.dataframe(styled_prod, width="stretch", hide_index=True)
-        st.caption("*Data Source: Creditas Database*")
+    st.dataframe(styled_prod, use_container_width=True, hide_index=True)
+
+    st.caption("*Data Source: Creditas Database*")
 
 # ---- Footer ----
-st.markdown(f"""
+st.markdown(
+    f"""
 <div style="margin-top:40px;padding:16px 0;border-top:1px solid {C_BORDER};
-            text-align:center;color:{C_MUTED};font-size:11px;letter-spacing:0.5px;">
-    IBL BANK · Credit Card Activation Dashboard · Confidential
+text-align:center;color:{C_MUTED};font-size:11px;letter-spacing:0.5px;">
+IBL BANK · Credit Card Activation Dashboard · Confidential
 </div>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
