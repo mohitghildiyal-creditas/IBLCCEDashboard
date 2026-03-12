@@ -257,6 +257,7 @@ USERS = {
     "admin":           "admin@7860",
     "Sweta_Ganguly":   "ibl_cce@123",
     "Prithwish_Ray":   "ibl_cce@123",
+    "Urvish_Bhimani":  "ibl_cce@123"
 }
 
 if "authenticated" not in st.session_state:
